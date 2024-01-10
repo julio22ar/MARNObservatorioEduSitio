@@ -1,0 +1,182 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap");
+
+html {
+  overflow-x: hidden;
+}
+* {
+  box-sizing: border-box;
+}
+
+/*COLORS*/
+
+.blue {
+    background-image: url(./wood-cuadradoConBorde.svg);
+}
+.red {
+    background-image: url(./wood-cuadradoNormal.svg);
+}
+.yellow {
+    background-image: url(./wood-tablaConFormaRara.svg);
+}
+.green {
+    background-image: url(./wood-cuadradoConBorde.svg);
+}
+.babyBlue {
+    background-image: url(./wood-cuadradoNormal.svg);
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+
+.box {
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 300px; /* Cajas más pequeñas */
+  height: 150px; /* Cajas más pequeñas */
+  margin: 20px; /* Más espacio alrededor de las cajas */
+  border-radius: 10px; /* Bordes más redondeados */
+  transform: translateX(100%);
+  transition: transform 0.5s ease;
+}
+.box:nth-of-type(even) {
+  transform: translateX(-400%);
+}
+.box:nth-of-type(odd) {
+  transform: translateX(400%);
+}
+.box.show {
+  transform: translateX(0);
+}
+.box h2 {
+  font-size: 27px; /* Texto más pequeño */
+  text-shadow: 1px 1px 2px #000; /* Sombra de texto más suave */
+  
+}
+.box:active {
+    animation: wiggle 0.2s ease-in-out;
+  }
+  
+
+.areasDeEstudioSection {
+  background-image: url(./fondoMobileMARN.svg);
+  background-size: cover;
+  width: 100%; /* Cambiado de max-content a 100% */
+}
+
+.areasDeEstudioSection,
+.faqSection {
+  position: relative; /* Asegura que los elementos absolutos dentro de las secciones se posicionen correctamente */
+}
+
+.divider-container {
+  position: absolute; /* Posiciona la imagen del divisor absolutamente */
+  width: 100%;
+  top: 50%; /* Centra la imagen del divisor verticalmente */
+  left: 0;
+  z-index: 10; /* Asegura que la imagen del divisor esté sobre las secciones */
+}
+
+.divider-container img {
+  display: block;
+  width: 100%; /* Ajusta este valor para cambiar el tamaño de la imagen */
+  height: auto;
+}
+
+.faqSection {
+  background-image: url(./fagFondoMARN.png);
+  background-size: cover;
+  background-repeat: repeat-y;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  position: relative; /* Asegura que los elementos absolutos dentro de las secciones se posicionen correctamente */
+}
+.divider-container {
+  position: absolute; /* Posiciona la imagen del divisor absolutamente */
+  width: 100%;
+  top: -1px; /* Mueve la imagen hacia arriba */
+  left: 0;
+  z-index: 10; /* Asegura que la imagen del divisor esté sobre las secciones */
+}
+
+.divider-container img {
+  display: block;
+  width: 130%; /* Ajusta este valor para cambiar el tamaño de la imagen */
+  height: auto;
+}
+
+.header-faqSection img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+.image-container {
+  position: relative;
+  text-align: center;
+}
+
+.image-container img {
+  width: 60%;
+  height: auto;
+}
+
+.image-container h3 {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #ffffff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+details {
+  border: 3px solid #a200ff; /* Color del borde cuando la pregunta está cerrada */
+  border-radius: 4px;
+  padding: 0.5em 0.5em 0;
+  margin-bottom: 1em;
+}
+
+summary {
+  font-weight: bold;
+  color: #fff;
+  margin: -0.5em -0.5em 0;
+  padding: 0.5em;
+}
+
+details[open] {
+  color: #fff;
+  padding: 0.5em;
+  border-color: #f695f6; /* Color del borde cuando la pregunta está abierta */
+}
+
+details[open] summary {
+  margin-bottom: 0.5em;
+}
+
+.footerSection {
+    background-color: rgb(50, 62, 72);
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan cuando no hay suficiente espacio */
+  }
+  
+  .footerSection img {
+    margin-right: 10px;
+    max-width: 100%; /* Asegura que la imagen no exceda el ancho del contenedor */
+    height: auto; /* Ajusta automáticamente la altura según el ancho */
+  }
+  
