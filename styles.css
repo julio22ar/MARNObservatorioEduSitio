@@ -10,19 +10,19 @@ html {
 /*COLORS*/
 
 .blue {
-    background-image: url(./wood-cuadradoConBorde.svg);
+  background-image: url(./wood-cuadradoConBorde.svg);
 }
 .red {
-    background-image: url(./wood-cuadradoNormal.svg);
+  background-image: url(./wood-cuadradoNormal.svg);
 }
 .yellow {
-    background-image: url(./wood-tablaConFormaRara.svg);
+  background-image: url(./wood-tablaConFormaRara.svg);
 }
 .green {
-    background-image: url(./wood-cuadradoConBorde.svg);
+  background-image: url(./wood-cuadradoConBorde.svg);
 }
 .babyBlue {
-    background-image: url(./wood-cuadradoNormal.svg);
+  background-image: url(./wood-cuadradoNormal.svg);
 }
 
 body {
@@ -34,7 +34,6 @@ body {
   margin: 0;
   overflow-x: hidden;
 }
-
 
 .box {
   background-size: cover;
@@ -62,12 +61,10 @@ body {
 .box h2 {
   font-size: 27px; /* Texto más pequeño */
   text-shadow: 1px 1px 2px #000; /* Sombra de texto más suave */
-  
 }
 .box:active {
-    animation: wiggle 0.2s ease-in-out;
-  }
-  
+  animation: wiggle 0.2s ease-in-out;
+}
 
 .areasDeEstudioSection {
   background-image: url(./fondoMobileMARN.svg);
@@ -95,7 +92,7 @@ body {
 }
 
 .faqSection {
-  background-image: url(./fagFondoMARN.png);
+  background-image: url(./faqFondoMARN.svg);
   background-size: cover;
   background-repeat: repeat-y;
   padding: 20px;
@@ -166,17 +163,71 @@ details[open] summary {
   margin-bottom: 0.5em;
 }
 
+.form-container {
+  padding: 20px;
+  border-radius: 5px;
+  max-width: 500px;
+  margin: auto;
+}
+
+.form-container h3 {
+  text-align: center;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.form-container form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-container label {
+  color: #fff;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.form-container input[type="text"],
+.form-container input[type="email"],
+.form-container textarea {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  transition: box-shadow 0.3s ease;
+}
+
+.form-container input[type="text"]:focus,
+.form-container input[type="email"]:focus,
+.form-container textarea:focus {
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  outline: none;
+}
+
+.form-container input[type="submit"] {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.form-container input[type="submit"]:hover {
+  background-color: #0056b3;
+}
 .footerSection {
-    background-color: rgb(50, 62, 72);
-    display: flex;
-    align-items: center;
-    padding: 10px;
-    flex-wrap: wrap; /* Permite que los elementos se envuelvan cuando no hay suficiente espacio */
-  }
-  
-  .footerSection img {
-    margin-right: 10px;
-    max-width: 100%; /* Asegura que la imagen no exceda el ancho del contenedor */
-    height: auto; /* Ajusta automáticamente la altura según el ancho */
-  }
-  
+  background-color: rgb(50, 62, 72);
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  flex-wrap: wrap; /* Permite que los elementos se envuelvan cuando no hay suficiente espacio */
+}
+
+.footerSection img {
+  margin-right: 10px;
+  max-width: 100%; /* Asegura que la imagen no exceda el ancho del contenedor */
+  height: auto; /* Ajusta automáticamente la altura según el ancho */
+}
