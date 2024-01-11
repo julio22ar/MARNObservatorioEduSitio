@@ -1,4 +1,5 @@
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -6,100 +7,111 @@
     <script defer src="/index.js"></script>
     <title>pruebasBEllacasEdu</title>
 </head>
-<body>
-    <header class="headerSection">
-        <!-- <img src="./logo-peq-observatorio.png"> -->
-    </header>
-    <section class="areasDeEstudioSection">
+<div class="mobile-content">
 
-       <a style="text-decoration: none" href="ruta/a/pagina/hidrologia.html">
-            <div class = "box blue show">
-                <h2>Hidrologia</h2>
+    <body class="body-mobile">
+        <header class="headerSection">
+            <!-- <img src="./logo-peq-observatorio.png"> -->
+        </header>
+        <section class="areasDeEstudioSection">
+
+            <a style="text-decoration: none" href="ruta/a/pagina/hidrologia.html">
+                <div class="box blue show">
+                    <h2>Hidrologia</h2>
+                </div>
+            </a>
+            <a style="text-decoration: none" href="ruta/a/pagina/vulcanologia.html">
+                <div class="box red show ">
+                    <h2>Vulcanologia</h2>
+                </div>
+            </a>
+            <a style="text-decoration: none" href="ruta/a/pagina/meteorologia.html">
+                <div class="box yellow show ">
+                    <h2>Meteorologia</h2>
+                </div>
+            </a>
+            <a style="text-decoration: none" href="ruta/a/pagina/geologia.html">
+                <div class="box green show">
+                    <h2>Geologia</h2>
+                </div>
+            </a>
+            <a style="text-decoration: none" href="ruta/a/pagina/ocenanografia.html">
+                <div class="box babyblue show">
+                    <h2>Ocenanografia</h2>
+                </div>
+            </a>
+        </section>
+
+
+
+        <section class="faqSection">
+            <div class="divider-container">
+                <img src="./divisorAzulCOnTexturaPapelRoto.png">
             </div>
-        </a>
-        <a style="text-decoration: none" href="ruta/a/pagina/vulcanologia.html">
-            <div class = "box red show ">
-                <h2>Vulcanologia</h2>
+            <header class="header-faqSection">
+                <div class="image-container">
+                    <img src="./woddenboardart-01.svg">
+                    <h3>Preguntas Frecuentes</h3>
+                </div>
+            </header>
+
+            <!-- PREGUNTAS DE VULCANOLOGÍA -->
+            <details>
+                <summary>¿Qué es un volcán?</summary>
+                <p>Un volcán es una estructura geológica por la que emergen el magma en forma de lava y gases del
+                    interior de la Tierra.</p>
+            </details>
+
+            <!-- PREGUNTAS DE HIDROLOGÍA -->
+            <details>
+                <summary>¿Qué es la hidrología?</summary>
+                <p>La hidrología es la ciencia que se ocupa del estudio de la distribución, movimiento y propiedades del
+                    agua en la Tierra.</p>
+            </details>
+
+            <!-- PREGUNTAS DE METEOROLOGÍA -->
+            <details>
+                <summary>¿Qué es la meteorología?</summary>
+                <p>La meteorología es la ciencia que estudia los fenómenos atmosféricos y las condiciones físicas que
+                    los producen.</p>
+            </details>
+
+            <!-- PREGUNTAS DE GEOLOGÍA -->
+            <details>
+                <summary>¿Qué es la geología?</summary>
+                <p>La geología es la ciencia que estudia la composición y estructura interna de la Tierra, y los
+                    procesos que la han afectado desde su origen.</p>
+            </details>
+
+            <!-- PREGUNTAS DE OCEANOGRAFÍA -->
+            <details>
+                <summary>¿Qué es la oceanografía?</summary>
+                <p>La oceanografía es la ciencia que estudia la composición, ecología, geología y física del océano.</p>
+            </details>
+
+            <!-- FORMULARIO DE PREGUNTAS -->
+            <div class="form-container">
+                <h3>¿Tienes alguna pregunta?</h3>
+                <form action="/submit-question" method="post">
+                    <label for="name">Nombre:</label><br>
+                    <input type="text" id="name" name="name"><br>
+                    <label for="question">Pregunta:</label><br>
+                    <textarea id="question" name="question"></textarea><br>
+                    <input type="submit" value="Enviar">
+                </form>
             </div>
-        </a>
-        <a style="text-decoration: none" href="ruta/a/pagina/meteorologia.html">
-            <div class = "box yellow show ">
-                <h2>Meteorologia</h2>
-            </div>
-        </a>
-        <a style="text-decoration: none" href="ruta/a/pagina/geologia.html">
-            <div class="box green show">
-                <h2>Geologia</h2>
-            </div>
-        </a>
-        <a style="text-decoration: none" href="ruta/a/pagina/ocenanografia.html">
-            <div class = "box babyblue show">
-                <h2>Ocenanografia</h2>
-            </div>
-        </a>
-    </section>
-    
-
-
-<section class="faqSection">
-    <div class="divider-container">
-        <img src="./divisorAzulCOnTexturaPapelRoto.png">
-    </div>
-    <header class="header-faqSection">
-        <div class="image-container">
-            <img src="./woddenboardart-01.svg">
-            <h3>Preguntas Frecuentes</h3>
-        </div>
-    </header>
-
-    <!-- PREGUNTAS DE VULCANOLOGÍA -->
-    <details>
-        <summary>¿Qué es un volcán?</summary>
-        <p>Un volcán es una estructura geológica por la que emergen el magma en forma de lava y gases del interior de la Tierra.</p>
-    </details>
-
-    <!-- PREGUNTAS DE HIDROLOGÍA -->
-    <details>
-        <summary>¿Qué es la hidrología?</summary>
-        <p>La hidrología es la ciencia que se ocupa del estudio de la distribución, movimiento y propiedades del agua en la Tierra.</p>
-    </details>
-
-    <!-- PREGUNTAS DE METEOROLOGÍA -->
-    <details>
-        <summary>¿Qué es la meteorología?</summary>
-        <p>La meteorología es la ciencia que estudia los fenómenos atmosféricos y las condiciones físicas que los producen.</p>
-    </details>
-
-    <!-- PREGUNTAS DE GEOLOGÍA -->
-    <details>
-        <summary>¿Qué es la geología?</summary>
-        <p>La geología es la ciencia que estudia la composición y estructura interna de la Tierra, y los procesos que la han afectado desde su origen.</p>
-    </details>
-
-    <!-- PREGUNTAS DE OCEANOGRAFÍA -->  
-    <details>
-        <summary>¿Qué es la oceanografía?</summary>
-        <p>La oceanografía es la ciencia que estudia la composición, ecología, geología y física del océano.</p>
-    </details>
-
-        <!-- FORMULARIO DE PREGUNTAS -->
-        <div class="form-container">
-            <h3>¿Tienes alguna pregunta?</h3>
-            <form action="/submit-question" method="post">
-                <label for="name">Nombre:</label><br>
-                <input type="text" id="name" name="name"><br>
-                <label for="question">Pregunta:</label><br>
-                <textarea id="question" name="question"></textarea><br>
-                <input type="submit" value="Enviar">
-            </form>
-        </div>
-</section>
+        </section>
 
 
 
 
-<footer class="footerSection">
-    <img src="./Logotipo-MARNBlanco.png" alt="Logo del Ministerio de Medio Ambiente Y Recursos Naturales de El Salvador">
-</footer>
-</body>
+        <footer class="footerSection">
+            <img src="./Logotipo-MARNBlanco.png"
+                alt="Logo del Ministerio de Medio Ambiente Y Recursos Naturales de El Salvador">
+        </footer>
+    </body>
+
+
+</div>
+
 </html>
