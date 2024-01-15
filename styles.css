@@ -13,29 +13,37 @@ html {
 @media only screen and (max-width: 767px) {
   /*COLORS*/
 
-.blue {
-  background-image: url(./wood-cuadradoConBorde.svg);
-}
-.red {
-  background-image: url(./wood-cuadradoNormal.svg);
-}
-.yellow {
-  background-image: url(./wood-tablaConFormaRara.svg);
-}
-.green {
-  background-image: url(./wood-cuadradoConBorde.svg);
-}
-.babyBlue {
-  background-image: url(./wood-cuadradoNormal.svg);
-}
-  .body-mobile {
+  @import url("https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap");
+
+  html, body {
+    overflow-x: hidden;
+    margin: 0;
     font-family: "Roboto", sans-serif;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  body {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 0;
-    overflow-x: hidden;
+  }
+  
+  /*COLORS*/
+  
+  .blue, .green {
+    background-image: url(./wood-cuadradoConBorde.svg);
+  }
+  
+  .red, .babyBlue {
+    background-image: url(./wood-cuadradoNormal.svg);
+  }
+  
+  .yellow {
+    background-image: url(./wood-tablaConFormaRara.svg);
   }
   
   .box {
@@ -45,82 +53,84 @@ html {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 300px; /* Cajas más pequeñas */
-    height: 150px; /* Cajas más pequeñas */
-    margin: 20px; /* Más espacio alrededor de las cajas */
-    border-radius: 10px; /* Bordes más redondeados */
+    width: 200px;
+    height: 100px;
+    margin: 20px;
     transform: translateX(100%);
     transition: transform 0.5s ease;
+    margin-left: auto;
+    margin-right: auto;
   }
+  
   .box:nth-of-type(even) {
     transform: translateX(-400%);
   }
+  
   .box:nth-of-type(odd) {
     transform: translateX(400%);
   }
+  
   .box.show {
     transform: translateX(0);
   }
+  
   .box h2 {
-    font-size: 27px; /* Texto más pequeño */
-    text-shadow: 1px 1px 2px #000; /* Sombra de texto más suave */
+    font-size: 20px;
+    color: #fff;
+    text-shadow: 1px 1px 2px #000;
   }
+  
   .box:active {
     animation: wiggle 0.2s ease-in-out;
   }
   
-  .areasDeEstudioSection {
-    background-image: url(./fondoMobileMARN.svg);
-    background-size: cover;
-    width: 100%; /* Cambiado de max-content a 100% */
+  .areasDeEstudioSection > img{
+    width: 100%;
+    height: auto;
   }
   
   .areasDeEstudioSection,
   .faqSection {
-    position: relative; /* Asegura que los elementos absolutos dentro de las secciones se posicionen correctamente */
-  }
-  
-  .divider-container {
-    position: absolute; /* Posiciona la imagen del divisor absolutamente */
+    position: relative;
     width: 100%;
-    top: 50%; /* Centra la imagen del divisor verticalmente */
-    left: 0;
-    z-index: 10; /* Asegura que la imagen del divisor esté sobre las secciones */
+    background-size: cover;
   }
   
-  .divider-container img {
-    display: block;
-    width: 100%; /* Ajusta este valor para cambiar el tamaño de la imagen */
-    height: auto;
+  .areasDeEstudioSection {
+    background-image: url(./fondoMobileMARN.svg);
+    padding: 10%;
   }
   
   .faqSection {
     background-image: url(./faqFondoMARN.svg);
-    background-size: cover;
     background-repeat: repeat-y;
     padding: 20px;
     font-family: Arial, sans-serif;
-    position: relative; /* Asegura que los elementos absolutos dentro de las secciones se posicionen correctamente */
   }
-  .divider-container {
-    position: absolute; /* Posiciona la imagen del divisor absolutamente */
-    width: 100%;
-    top: -1px; /* Mueve la imagen hacia arriba */
-    left: 0;
-    z-index: 10; /* Asegura que la imagen del divisor esté sobre las secciones */
-  }
+  
+  
   
   .divider-container img {
     display: block;
-    width: 130%; /* Ajusta este valor para cambiar el tamaño de la imagen */
+    width: 110%;
     height: auto;
+    position: relative;
+    top: -50px;
+    left: -18px; /* Adjust this value to move the image more to the left */
   }
-  
-  .header-faqSection img {
+  .dividerImage {
+    width: 150%; /* Adjust this value to change the width of the image */
+    height: auto; /* This will maintain the aspect ratio of the image */
+    object-fit: cover; /* This will maintain the aspect ratio of the image */
+    position: relative;
+    top: -50px;
+    left: -20px; /* Adjust this value to move the image more to the left */
+  }
+  .image-container img {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 50%;
+    width: 70%;
   }
   
   .image-container {
@@ -128,12 +138,8 @@ html {
     text-align: center;
   }
   
-  .image-container img {
-    width: 60%;
-    height: auto;
-  }
   
-  .image-container h3 {
+  .image-container h1 {
     position: absolute;
     top: 40%;
     left: 50%;
@@ -143,7 +149,7 @@ html {
   }
   
   details {
-    border: 3px solid #a200ff; /* Color del borde cuando la pregunta está cerrada */
+    border: 3px solid #a200ff;
     border-radius: 4px;
     padding: 0.5em 0.5em 0;
     margin-bottom: 1em;
@@ -153,13 +159,15 @@ html {
     font-weight: bold;
     color: #fff;
     margin: -0.5em -0.5em 0;
-    padding: 0.5em;
-  }
+    padding: 0.5em;}
   
   details[open] {
     color: #fff;
+    font-weight: bold;
     padding: 0.5em;
-    border-color: #f695f6; /* Color del borde cuando la pregunta está abierta */
+    border-color: #f695f6;
+    background-color: rgba(241, 25, 231, 0.164); 
+    border-radius: 10px;/* Add this line */
   }
   
   details[open] summary {
@@ -221,24 +229,24 @@ html {
   .form-container input[type="submit"]:hover {
     background-color: #0056b3;
   }
+  
   .footerSection {
     background-color: rgb(50, 62, 72);
     display: flex;
     align-items: center;
     padding: 10px;
-    flex-wrap: wrap; /* Permite que los elementos se envuelvan cuando no hay suficiente espacio */
+    flex-wrap: wrap;
   }
   
   .footerSection img {
     margin-right: 10px;
-    max-width: 100%; /* Asegura que la imagen no exceda el ancho del contenedor */
-    height: auto; /* Ajusta automáticamente la altura según el ancho */
+    max-width: 100%;
+    height: auto;
   }
-  
-}
 
 @media only screen and (min-width: 768px) {
   .mobile-content {
     display: none; /* Ocultar contenido para móviles y tabletas en escritorios */
   }
+}
 }
