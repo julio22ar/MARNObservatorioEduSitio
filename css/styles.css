@@ -133,7 +133,31 @@ html {
   }
   .image-container img {
     display: block;
-    margin-left: auto;
+    margin-left: auto;.left-adjust {
+    left: -18px;
+}
+
+.dividerImage, .image-container img {
+    width: 150%;
+    height: auto;
+    object-fit: cover;
+}
+
+.dividerImage {
+    position: relative;
+    top: -50px;
+    left: -20px;
+}
+
+.image-container img {
+    display: block;
+    margin: 0 auto;
+}
+
+.image-container {
+    position: relative;
+    text-align: center;
+}
     margin-right: auto;
     width: 70%;
   }
