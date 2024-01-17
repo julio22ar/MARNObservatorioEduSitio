@@ -109,7 +109,6 @@ html {
   
   .faqSection {
     background-image: url(../img/faqFondoMARN.svg);
-    background-repeat: repeat-y;
     padding: 20px;
     font-family: Arial, sans-serif;
   }
