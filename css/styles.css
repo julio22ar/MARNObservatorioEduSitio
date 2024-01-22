@@ -1,38 +1,27 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap");
 
 
-html {
-  overflow-x: hidden;
-}
 * {
   box-sizing: border-box;
 }
 
+html, body {
+  overflow-x: hidden;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
 
 
 @media only screen and (max-width: 767px) {
-  /*COLORS*/
 
-  @import url("https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap");
-
-  html, body {
-    overflow-x: hidden;
-    margin: 0;
-    font-family: "Roboto", sans-serif;
-  }
-  
-  * {
-    box-sizing: border-box;
-  }
-  
-  body {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  
   /*fondos de Pantalla*/
   
   .geo {
@@ -108,7 +97,7 @@ html {
   }
   
   .faqSection {
-    background-image: url(../img/faqFondoMARN.svg);
+    background-image: url(../img/faqFondoEstrellas.svg);
     padding: 20px;
     font-family: Arial, sans-serif;
   }
@@ -131,11 +120,6 @@ html {
     top: -50px;
     left: -20px; /* Adjust this value to move the image more to the left */
   }
-  .image-container img {
-    display: block;
-    margin-left: auto;.left-adjust {
-    left: -18px;
-}
 
 .dividerImage, .image-container img {
     width: 150%;
@@ -150,21 +134,17 @@ html {
 }
 
 .image-container img {
-    display: block;
-    margin: 0 auto;
+  display: block;
+  margin: 0 auto;
+  width: 70%;
+  
 }
 
-.image-container {
-    position: relative;
-    text-align: center;
-}
-    margin-right: auto;
-    width: 70%;
-  }
-  
+
   .image-container {
     position: relative;
     text-align: center;
+    padding-bottom: 3em;
   }
   
   
@@ -178,7 +158,7 @@ html {
   }
   
   details {
-    border: 3px solid #a200ff;
+    background-color: rgba(241, 15, 230, 0.308); 
     border-radius: 4px;
     padding: 0.5em 0.5em 0;
     margin-bottom: 1em;
@@ -191,11 +171,11 @@ html {
     padding: 0.5em;}
   
   details[open] {
-    color: #fff;
+    color: #ffffff;
+    font-weight: bold;
     font-weight: bold;
     padding: 0.5em;
-    border-color: #f695f6;
-    background-color: rgba(241, 25, 231, 0.164); 
+    background-color: rgba(241, 25, 230, 0.508); 
     border-radius: 10px;/* Add this line */
   }
   
@@ -206,8 +186,8 @@ html {
   .form-container {
     padding: 20px;
     border-radius: 5px;
-    max-width: 500px;
-    margin: auto;
+    max-width: 90%;
+    margin: auto; 
   }
   
   .form-container h3 {
