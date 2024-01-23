@@ -4,6 +4,7 @@
 html {
   overflow-x: hidden;
 }
+
 * {
   box-sizing: border-box;
 }
@@ -14,52 +15,58 @@ html {
 @media only screen and (max-width: 767px) {
   /*COLORS*/
 
+  .desktop-content {
+    display: none;
+    /* Ocultar contenido para escritorio */
+  }
+
   @import url("https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap");
 
-  html, body {
+  html,
+  body {
     overflow-x: hidden;
     margin: 0;
     font-family: "Roboto", sans-serif;
   }
-  
+
   * {
     box-sizing: border-box;
   }
-  
+
   body {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
-  
+
   /*fondos de Pantalla*/
-  
+
   .geo {
     background-image: url(../img/geologíaBoton_.svg);
   }
-  
-  .sism{
+
+  .sism {
     background-image: url(../img/sismologiaBoton_.svg);
   }
-  
+
   .hidro {
     background-image: url(../img/hidrologiaboton_.svg);
   }
 
-  .vulcan{
+  .vulcan {
     background-image: url(../img/Vulcanologiaboton_.svg);
 
   }
 
-  .meteo{
+  .meteo {
     background-image: url(../img/meteorologiaboton_.svg);
   }
 
-  .ocean{
+  .ocean {
     background-image: url(../img/oceanografiaboton_.svg);
   }
-  
+
   .box {
     background-size: cover;
     background-position: center;
@@ -72,78 +79,85 @@ html {
     margin-left: auto;
     margin-right: auto;
   }
-  
+
   .box:nth-of-type(even) {
     transform: translateX(-400%);
   }
-  
+
   .box:nth-of-type(odd) {
     transform: translateX(400%);
   }
-  
+
   .box.show {
     transform: translateX(0);
   }
-  
- 
+
+
   .box:active {
     animation: wiggle 0.2s ease-in-out;
   }
-  
-  .areasDeEstudioSection > img{
+
+  .areasDeEstudioSection>img {
     width: 100%;
     height: auto;
   }
-  
+
   .areasDeEstudioSection,
   .faqSection {
     position: relative;
     width: 100%;
   }
-  
+
   .areasDeEstudioSection {
     background-image: url(../img/fondoMobileMARN.svg);
     padding: 10%;
     background-size: cover;
   }
-  
+
   .faqSection {
     background-image: url(../img/faqFondoMARN.svg);
     padding: 20px;
     font-family: Arial, sans-serif;
   }
-  
-  
-  
+
+
+
   .divider-container img {
     display: block;
     width: 110%;
     height: auto;
     position: relative;
     top: -50px;
-    left: -18px; /* Adjust this value to move the image more to the left */
+    left: -18px;
+    /* Adjust this value to move the image more to the left */
   }
+
   .dividerImage {
-    width: 150%; /* Adjust this value to change the width of the image */
-    height: auto; /* This will maintain the aspect ratio of the image */
-    object-fit: cover; /* This will maintain the aspect ratio of the image */
+    width: 150%;
+    /* Adjust this value to change the width of the image */
+    height: auto;
+    /* This will maintain the aspect ratio of the image */
+    object-fit: cover;
+    /* This will maintain the aspect ratio of the image */
     position: relative;
     top: -50px;
-    left: -20px; /* Adjust this value to move the image more to the left */
+    left: -20px;
+    /* Adjust this value to move the image more to the left */
   }
+
   .image-container img {
     display: block;
     margin-left: auto;
     margin-right: auto;
     width: 70%;
   }
-  
+
   .image-container {
     position: relative;
     text-align: center;
   }
-  
-  
+
+
   .image-container h1 {
     position: absolute;
     top: 40%;
@@ -152,57 +166,59 @@ html {
     color: #ffffff;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   }
-  
+
   details {
     border: 3px solid #a200ff;
     border-radius: 4px;
     padding: 0.5em 0.5em 0;
     margin-bottom: 1em;
   }
-  
+
   summary {
     font-weight: bold;
     color: #fff;
     margin: -0.5em -0.5em 0;
-    padding: 0.5em;}
-  
+    padding: 0.5em;
+  }
+
   details[open] {
     color: #fff;
     font-weight: bold;
     padding: 0.5em;
     border-color: #f695f6;
-    background-color: rgba(241, 25, 231, 0.164); 
-    border-radius: 10px;/* Add this line */
+    background-color: rgba(241, 25, 231, 0.164);
+    border-radius: 10px;
+    /* Add this line */
   }
-  
+
   details[open] summary {
     margin-bottom: 0.5em;
   }
-  
+
   .form-container {
     padding: 20px;
     border-radius: 5px;
     max-width: 500px;
     margin: auto;
   }
-  
+
   .form-container h3 {
     text-align: center;
     color: #fff;
     margin-bottom: 20px;
   }
-  
+
   .form-container form {
     display: flex;
     flex-direction: column;
   }
-  
+
   .form-container label {
     color: #fff;
     font-weight: bold;
     margin-bottom: 5px;
   }
-  
+
   .form-container input[type="text"],
   .form-container input[type="email"],
   .form-container textarea {
@@ -212,14 +228,14 @@ html {
     margin-bottom: 20px;
     transition: box-shadow 0.3s ease;
   }
-  
+
   .form-container input[type="text"]:focus,
   .form-container input[type="email"]:focus,
   .form-container textarea:focus {
     box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
     outline: none;
   }
-  
+
   .form-container input[type="submit"] {
     padding: 10px 20px;
     background-color: #007bff;
@@ -230,11 +246,11 @@ html {
     cursor: pointer;
     transition: background-color 0.3s ease;
   }
-  
+
   .form-container input[type="submit"]:hover {
     background-color: #0056b3;
   }
-  
+
   .footerSection {
     background-color: rgb(50, 62, 72);
     display: flex;
@@ -242,16 +258,111 @@ html {
     padding: 10px;
     flex-wrap: wrap;
   }
-  
+
   .footerSection img {
     margin-right: 10px;
     max-width: 100%;
     height: auto;
   }
 
+
+}
+
 @media only screen and (min-width: 768px) {
   .mobile-content {
-    display: none; /* Ocultar contenido para móviles y tabletas en escritorios */
+    display: none;
+    /* Ocultar contenido para móviles y tabletas en escritorios */
   }
-}
+
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  .body-desktop {
+
+    margin: 0;
+  }
+
+  .header-desktop {
+    width: 100%;
+    display: block;
+    z-index: 3;
+    position: relative;
+  }
+
+  .header-desktop img {
+    width: 100%;
+    height: auto;
+
+  }
+
+  .zonademapa-desktop {
+    background-image: url(../img/atrasdelmapa.svg);
+    background-size: cover;
+    margin-top: -130px;
+
+    height: 150vh;
+    z-index: 2;
+    position: relative;
+  }
+
+  .grasszone-desktop {
+    background-image: url(../img/grassbg.svg);
+    background-size: cover;
+    height: 275vh;
+    z-index: 4;
+    position: relative;
+    margin-top: -130px;
+
+
+  }
+
+  .bannerdivisor-desktop {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    position: relative;
+    z-index: 4;
+
+  }
+
+  .bannerdivisor-desktop img {
+    max-width: 100%;
+    height: 100vh;
+
+  }
+
+  .lakezone-desktop {
+
+    background-image: url(../img/fondolago.svg);
+    background-size: cover;
+    height: 175vh;
+    z-index: 1;
+    position: relative;
+    margin-top: -165px;
+
+  }
+
+  .spacezone-desktop {
+    background-image: url(../img/faqFondoMARN.svg);
+    height: 247vh;
+    z-index: 0;
+    position: relative;
+    margin-top: -100px;
+    background-repeat: repeat-y;
+  }
+
+  .footer-desktop {
+    background-image: url(../img/footer.svg);
+    height: 250px;
+    z-index: 5;
+    position: relative;
+    margin-top: -150px;
+  }
+
+
 }
