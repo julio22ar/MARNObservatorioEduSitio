@@ -182,7 +182,7 @@ body {
   details[open] summary {
     margin-bottom: 0.5em;
   }
-  
+
   .form-container {
     padding: 20px;
     border-radius: 5px;
@@ -252,6 +252,35 @@ body {
     max-width: 100%;
     height: auto;
   }
+/* HIDROLOGIA  */
+
+/* Navegación */
+nav {
+  /* background-color: #F28B00; */
+}
+
+body-mobile {
+  background-color: #F28B00;
+}
+mobile-content {
+  background-color: #fbc57e;
+}
+/* Contenido principal */
+.temaPrincipal {
+  background-color: #FFD324;
+}
+
+/* Contenido secundario */
+.infoSecundaria {
+  background-color: #FFA500;
+}
+
+/* Footer */
+footer {
+  background-color: #DAA520;
+}
+
+
 
 @media only screen and (min-width: 768px) {
   .mobile-content {
