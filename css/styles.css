@@ -22,6 +22,55 @@ body {
 
 @media only screen and (max-width: 767px) {
 
+  .hamburger-menu {
+    position: fixed;
+  top: 10px; /* Adjust as needed */
+  right: 10px; /* Adjust as needed */
+    display: inline-block;
+    cursor: pointer;
+    padding: 15px;
+  background-color: #7cb0d06d; /* Tomato color */
+  border-radius: 5px; /* Rounded corners */
+  }
+  .hamburger-menu:hover {
+    background-color: #054b77; /* Darker tomato color on hover */
+  }
+  .hamburger-menu span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background-color: #fff; /* White lines */
+  }
+  .hamburger-menu span:nth-child(odd) {
+    background-color: #000000; /* Black lines for odd-numbered spans */
+  }
+  .menu {
+    position: relative;
+  }
+  .menu-items {
+    display: none;
+    list-style-type: none;
+    padding: 0;
+     position: fixed; /* Position it relative to the window */
+  top: 0; /* Align it with the top of the window */
+  left: 0; /* Align it with the left of the window */
+  width: 100%; /* Make it span the entire width of the window */
+  height: 100%; /* Make it span the entire height of the window */
+  background-color: rgba(32, 33, 52, 0.8); /* Semi-transparent black background */
+  z-index: 1000; /* Make it appear on top of everything else */
+  align-items: center; /* Center the menu items vertically */
+  justify-content: center; /* Center the menu items horizontally */
+  flex-direction: column;
+  }
+  
+  .menu-items li a {
+    color: #fff; /* White text */
+    text-align: center; /* Center the text */
+    margin: 10px 0; /* Add some vertical spacing between the items */
+  }
+
+
   /*fondos de Pantalla*/
   
   .geo {
