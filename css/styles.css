@@ -138,11 +138,27 @@ body {
     position: relative;
     width: 100%;
   }
+  .areasDeEstudioSectionVulcanologia.faqSection{
+    position: relative;
+    width: 100%;
+  }
+
+  .areasDeEstudioSectionVulcanologia > img{
+    width: 100%;
+    height: auto;
+  }
   
   .areasDeEstudioSection {
     background-image: url(../img/fondoMobileMARN.svg);
     padding: 10%;
     background-size: cover;
+  }
+  .areasDeEstudioSectionVulcanologia {
+    background-image: url(../img/fondoMobileVulca.svg);
+    padding: 10%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
   }
   
   .faqSection {
@@ -312,21 +328,93 @@ body-mobile {
   background-color: #F28B00;
 }
 mobile-content {
-  background-color: #fbc57e;
+  background-color: #fbc57e79;
 }
 /* Contenido principal */
 .temaPrincipal {
-  background-color: #FFD324;
+  background-color: #ffffffbc;
+  border-radius: 1rem; /* Use rem instead of px */
+  box-shadow: 0 0.2rem 1rem rgba(0, 0, 0, 0.1);
+  padding: 2rem; /* Use rem instead of px */
+  max-width: 50rem; /* Use rem instead of px */
+  margin: 2rem auto;
+  text-align: justify;
+  box-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.4);
+}
+
+.temaPrincipal img {
+  width: 100%;
+  height: auto;
+
+}
+.temaPrincipal h2 {
+  margin-top: 0;
+}
+
+.temaPrincipal p {
+  line-height: 1.6;
+}
+
+.temaPrincipal button {
+  background-color: #c68342;
+  color: #fff;
+  border: none;
+  border-radius: 0.5rem; /* Use rem instead of px */
+  padding: 1rem 2rem; /* Use rem instead of px */
+  text-transform: uppercase;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.temaPrincipal button:hover {
+  background-color: #00e1ff76;
 }
 
 /* Contenido secundario */
 .infoSecundaria {
-  background-color: #FFA500;
+  background-color: #ffffffbc;
+  border-radius: 1rem;
+  box-shadow: 0 0.2rem 1rem rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  max-width: 50rem;
+  margin: 2rem auto;
+  text-align: justify;
+  overflow: hidden;
+  height: 300px;
+  overflow-y: auto; /* Allow vertical scrolling */
+  height: 300px; /* Adjust as needed */
+}
+.infoSecundaria h3 {
+  margin-top: 0;
+}
+
+.infoSecundaria p {
+  line-height: 1.6;
+}
+
+.infoSecundaria .read-more {
+  display: none;
+}
+
+.infoSecundaria.expanded {
+  height: auto;
+}
+
+.infoSecundaria.expanded .read-more {
+  display: none;
+}
+
+.infoSecundaria.expanded .read-less {
+  display: inline;
+}
+
+.read-more, .read-less {
+  color: #c68342;
+  cursor: pointer;
 }
 
 /* Footer */
 footer {
-  background-color: #DAA520;
 }
 
 

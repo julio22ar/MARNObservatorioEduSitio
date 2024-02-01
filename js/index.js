@@ -33,3 +33,23 @@ document.addEventListener('DOMContentLoaded', function() {
       menuItems.style.display = 'none';
     });
   });
+
+  document.addEventListener('DOMContentLoaded', function() {
+    /* ... */
+  
+    // Expand infoSecundaria section
+    readMore.addEventListener('click', expandInfoSecundaria);
+    readMore.addEventListener('touchend', expandInfoSecundaria);
+  
+    // Collapse infoSecundaria section
+    readLess.addEventListener('click', collapseInfoSecundaria);
+    readLess.addEventListener('touchend', collapseInfoSecundaria);
+  
+    function expandInfoSecundaria() {
+      infoSecundaria.classList.add('expanded');
+    }
+  
+    function collapseInfoSecundaria() {
+      infoSecundaria.classList.remove('expanded');
+    }
+  });
