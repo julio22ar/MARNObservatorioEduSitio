@@ -63,12 +63,42 @@ body {
   justify-content: center; /* Center the menu items horizontally */
   flex-direction: column;
   }
-  
-  .menu-items li a {
-    color: #fff; /* White text */
-    text-align: center; /* Center the text */
-    margin: 10px 0; /* Add some vertical spacing between the items */
+  .menu-items li {
+    background-color: #FFD700; /* Gold background */
+    border-radius: 20px; /* Rounded corners */
+    margin: 5px; /* Add some space around each item */
+    padding: 10px; /* Add some space inside each item */
+    width: 200px; /* Width */
+    text-align: center;
   }
+  .menu-items li a {
+    color: #000; /* Black text */
+    text-decoration: none; /* Remove the underline */
+    font-size: 20px; /* Larger text */
+  }
+  .menu-items li:nth-child(1) {
+    background-color: #f6a311; /* Gold */
+  }
+  
+  .menu-items li:nth-child(2) {
+    background-color: #FF6347; /* Tomato */
+  }
+  
+  .menu-items li:nth-child(3) {
+    background-color: #05d5da; /* Turquoise */
+  }
+  .menu-items li:nth-child(4) {
+    background-color: #399c36; /* Gold */
+  }
+  
+  .menu-items li:nth-child(5) {
+    background-color: #bdeef2; /* Tomato */
+  }
+  
+  .menu-items li:nth-child(6) {
+    background-color: #4b0b8a; /* Turquoise */
+  }
+  
 
 
   /*fondos de Pantalla*/
