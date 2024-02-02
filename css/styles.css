@@ -160,6 +160,19 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed; 
   }
+
+  .areasDeEstudioSectionGeologia {
+    background-image: url(../img/fondoMobileGeo.svg);
+    padding: 10%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+  }
+
+  .areasDeEstudioSectionGeologia > img{
+    width: 100%;
+    height: auto;
+  }
   
   .faqSection {
     background-image: url(../img/faqFondoEstrellas.svg);
@@ -392,26 +405,6 @@ mobile-content {
   line-height: 1.6;
 }
 
-.infoSecundaria .read-more {
-  display: none;
-}
-
-.infoSecundaria.expanded {
-  height: auto;
-}
-
-.infoSecundaria.expanded .read-more {
-  display: none;
-}
-
-.infoSecundaria.expanded .read-less {
-  display: inline;
-}
-
-.read-more, .read-less {
-  color: #c68342;
-  cursor: pointer;
-}
 
 /* Footer */
 footer {
