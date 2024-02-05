@@ -67,7 +67,7 @@ body {
   flex-direction: column;
   }
   .menu-items li {
-    background-color: #FFD700; /* Gold background */
+    background-color: #944d15; /* Gold background */
     border-radius: 20px; /* Rounded corners */
     margin: 5px; /* Add some space around each item */
     padding: 10px; /* Add some space inside each item */
@@ -78,10 +78,8 @@ body {
 .menu-items li a {
   text-decoration: none; /* Remove the underline */
   font-size: 25px; /* Larger text */
-    color: #194c6d;
-    text-shadow: #000000;
+    color: #ffffff;
 }
-
 
   /*fondos de Pantalla*/
   
