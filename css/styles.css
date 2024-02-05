@@ -1,6 +1,9 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap");
 
-
+@font-face {
+  font-family: 'Kids Komik';
+  src: url('../fonts/kidskomik/KidsKomik/KidsKomik.ttf') format('truetype');
+}
 * {
   box-sizing: border-box;
 }
@@ -70,35 +73,14 @@ body {
     padding: 10px; /* Add some space inside each item */
     width: 200px; /* Width */
     text-align: center;
-  }
-  .menu-items li a {
-    color: #000; /* Black text */
-    text-decoration: none; /* Remove the underline */
-    font-size: 20px; /* Larger text */
-  }
-  .menu-items li:nth-child(1) {
-    background-color: #f6a311; /* Gold */
-  }
-  
-  .menu-items li:nth-child(2) {
-    background-color: #FF6347; /* Tomato */
-  }
-  
-  .menu-items li:nth-child(3) {
-    background-color: #05d5da; /* Turquoise */
-  }
-  .menu-items li:nth-child(4) {
-    background-color: #399c36; /* Gold */
-  }
-  
-  .menu-items li:nth-child(5) {
-    background-color: #bdeef2; /* Tomato */
-  }
-  
-  .menu-items li:nth-child(6) {
-    background-color: #4b0b8a; /* Turquoise */
-  }
-  
+    font-family: 'Kids Komik'; /* Apply the font */
+}
+.menu-items li a {
+  text-decoration: none; /* Remove the underline */
+  font-size: 25px; /* Larger text */
+    color: #194c6d;
+    text-shadow: #000000;
+}
 
 
   /*fondos de Pantalla*/
@@ -424,7 +406,6 @@ mobile-content {
   text-align: justify;
   overflow: hidden;
   height: 300px;
-  overflow-y: auto; /* Allow vertical scrolling */
   height: 300px; /* Adjust as needed */
 }
 .infoSecundaria h3 {
