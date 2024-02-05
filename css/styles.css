@@ -342,6 +342,28 @@ body {
     max-width: 100%;
     height: auto;
   }
+
+  .actividadesExtra {
+    display: block; /* Coloca los elementos uno al lado del otro */
+    justify-content: space-around; /* Distribuye los elementos uniformemente en el contenedor */
+    background-image: url(../img/fondoMobileVulca.svg); /* Aplica el fondo */
+    padding: 2em; /* Agrega algo de espacio alrededor de los elementos */
+    background-size: cover; /* Asegura que el fondo cubra toda la sección */
+    background-repeat: no-repeat; /* Evita que el fondo se repita */
+    background-attachment: fixed; 
+    text-align: center;
+}
+
+.actividadesExtra > .boton {
+  flex: 1;
+  margin: 0.5em auto;  /* Agrega algo de espacio alrededor de cada botón */
+  display: inline-block; /* Coloca los elementos uno al lado del otro */
+}
+
+.actividadesExtra > .boton > img {
+    width: 50%; /* Hace que las imágenes ocupen todo el ancho disponible */
+    height: auto; /* Mantiene la proporción de las imágenes */
+}
 /* HIDROLOGIA  */
 
 /* Navegación */
