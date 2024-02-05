@@ -16,22 +16,14 @@ function checkBoxes() {
     }
   });
 }
-document.addEventListener('DOMContentLoaded', function() {
-    var hamburgerMenu = document.querySelector('.hamburger-menu');
-    var menuItems = document.querySelector('.menu-items');
-  
-    hamburgerMenu.addEventListener('click', function(event) {
-      event.stopPropagation(); // Prevent this click from triggering the document's click event
-      if (menuItems.style.display === 'none' || menuItems.style.display === '') {
-        menuItems.style.display = 'flex';
-      } else {
-        menuItems.style.display = 'none';
-      }
-    });
-  
-    document.addEventListener('click', function() {
-      menuItems.style.display = 'none';
-    });
-  });
 
-  
+const hamburgerMenu = document.querySelector('.hamburger-menu');
+const menuItems = document.querySelector('.menu-items');
+
+hamburgerMenu.addEventListener('click', () => {
+    if (menuItems.style.left === '-100%') {
+        menuItems.style.left = '0';
+    } else {
+        menuItems.style.left = '-100%';
+    }
+});
