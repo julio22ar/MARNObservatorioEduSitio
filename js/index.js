@@ -18,12 +18,25 @@ function checkBoxes() {
 }
 
 const hamburgerMenu = document.querySelector('.hamburger-menu');
+const menu = document.querySelector('.menu');
 const menuItems = document.querySelector('.menu-items');
 
-hamburgerMenu.addEventListener('click', () => {
-    if (menuItems.style.left === '-100%') {
-        menuItems.style.left = '0';
-    } else {
-        menuItems.style.left = '-100%';
+// Set the initial state of menuItems.style.left
+menuItems.style.left = '-100%';
+
+const toggleMenu = () => {
+    menuItems.style.left = menuItems.style.left === '-100%' ? '0' : '-100%';
+}
+
+hamburgerMenu.addEventListener('click', (event) => {
+    event.stopPropagation(); // Prevent the event from bubbling up to the document
+    toggleMenu();
+});
+
+document.addEventListener('click', (event) => {
+    const isClickInsideMenu = menu.contains(event.target);
+
+    if (!isClickInsideMenu && menuItems.style.left === '0') {
+        toggleMenu();
     }
 });

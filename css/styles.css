@@ -67,7 +67,7 @@ body {
   .menu {
     position: fixed;
     bottom: 0;
-    width: 100vw;
+    width: 20vw;
     height: 5rem;
     z-index: 1;
 }
@@ -80,9 +80,10 @@ body {
     background: #444; /* Color de fondo del menú */
     display: flex; /* Para alinear los elementos verticalmente */
     flex-direction: column; /* Para que los elementos se apilen verticalmente */
-    align-items: center; /* Centra los elementos horizontalmente */
+    align-items: flex-start; /* Centra los elementos horizontalmente */
     justify-content: center; /* Centra los elementos verticalmente */
     transition: left 0.3s ease; /* Animación para deslizar el menú */
+    width: 60vw;
     /* ... */
 }
   .menu-items li {
