@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./css/styles.css" />
+  <script defer src="/js/index.js"></script>
+  <title>El observatorio Educa | Vulcanologia</title>
+</head>
+
+<body class="body-mobile">
+  <main class="mobile-content">
+    <section class="areasDeEstudioSectionVulcanologia">
+      <img src="./img/logo-peq-observatorio.svg"
+        alt="logo tamanio pequenio del observatorio del MInisterio De Mediao Ambiente Y Recursos Naturales de El Salvador" />
+
+        <nav class="menu">
+          <button class="hamburger-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+          <ul class="menu-items">
+            <li><a href="./index.html">Página  Principal</a></li>
+            <li><a href="./vulcanologia.html">vulcanología</a></li>
+            <li><a href="./meteorologia.html">Meteorología</a></li>
+            <li><a href="./geologia.html">Geología</a></li>
+            <li><a href="./oceanografia.html">Oceanografía</a></li>
+            <li><a href="./sismologia.html">Sismología</a></li>
+            <li><a href="">Recursos y actividades</a></li>
+            <li><a href="">Preguntas Frecuentes</a></li>
+            <li><a href="">Videos Educativos</a></li>
+
+          </ul>
+        </nav>
+<!-- Main content -->
+      <article class="temaPrincipal">
+      <img src="./img/santaAnaVolcan.jpg" alt="imagen del volcan de santa ana ">
+        <h2>¿Que es un volcan?</h2>
+        <body class="temaPrincipalContenedor">
+          <p>Un volcán es una abertura en la corteza terrestre que permite el escape de roca
+            derretida, gases y escombros hasta la superficie.</p>
+          <p>
+            San Salvador, San Miguel y Santa Ana tienen los volcanes más activos, pero
+            también hay otros distritos y territorios que tienen volcanes activos. Una erupción
+            volcánica puede implicar lava y escombros que pueden desplazarse a una
+            velocidad de hasta 100 mph, destruyendo todo a su paso. La ceniza volcánica
+            puede desplazarse por cientos de millas y provocar graves problemas de salud.
+            Una erupción volcánica puede:
+          </p>
+        </body>
+        <button>Ver mas</button>
+      </article>
+      <!-- Secondary Content -->
+      <aside class="infoSecundaria">
+        <article class="respuestaCorta">
+          <h3>Dato Curioso</h3>
+          <p>Un volcán es una abertura en la corteza terrestre que permite el escape de roca
+            derretida, gases y escombros hasta la superficie.</p>
+        </article>
+</aside>
+    </section>
+
+    <!-- PARTE DE PREGUNTAS -->
+    <section class="faqSection">
+      <img class="dividerImage" src="./img/bannerDivisorCafePapelRasgado.svg" />
+      <div class="image-container">
+        <img src="./img/faqImage.png" />
+      </div>
+
+      <article>
+        <details>
+          <summary>¿Qué es un volcán?</summary>
+          <p>
+            Un volcán es una estructura geológica por la que emergen el magma en
+            forma de lava y gases del interior de la Tierra.
+          </p>
+        </details>
+
+        <details>
+          <summary>¿Qué es la hidrología?</summary>
+          <p>
+            La hidrología es la ciencia que se ocupa del estudio de la
+            distribución, movimiento y propiedades del agua en la Tierra.
+          </p>
+        </details>
+
+        <details>
+          <summary>¿Qué es la meteorología?</summary>
+          <p>
+            La meteorología es la ciencia que estudia los fenómenos atmosféricos
+            y las condiciones físicas que los producen.
+          </p>
+        </details>
+
+        <details>
+          <summary>¿Qué es la geología?</summary>
+          <p>
+            La geología es la ciencia que estudia la composición y estructura
+            interna de la Tierra, y los procesos que la han afectado desde su
+            origen.
+          </p>
+        </details>
+
+        <details>
+          <summary>¿Qué es la oceanografía?</summary>
+          <p>
+            La oceanografía es la ciencia que estudia la composición, ecología,
+            geología y física del océano.
+          </p>
+        </details>
+      </article>
+      <!-- FORMULARIO PARA MANDAR LAS PREGUNTAS -->
+      <aside class="form-container">
+        <h3>¿Tienes alguna pregunta?</h3>
+        <form action="mailto:00163922@uca.edu.sv" method="post" enctype="text/plain">
+          <label for="name">Nombre:</label><br />
+          <input type="text" id="name" name="name" pattern="[a-zA-Z0-9]{5,}" required /><br />
+          <label for="question">Pregunta:</label><br />
+          <textarea id="question" name="question"></textarea><br />
+          <input type="submit" value="Enviar" />
+        </form>
+      </aside>
+    </section>
+
+    <section class="actividadesExtra">
+      <a href="semaforo.html" class="boton">
+          <img src="./img/SEMAFOROBOTON.png" alt="Semaforo">
+      </a>
+      <a href="atlas_volcanico.html" class="boton">
+        <img src="./img/ATLASVOLCABOTON_.png" alt="Atlas Volcanico">
+    </a>
+      <a href="recursos_actividades.html" class="boton">
+        <img src="./img/RECURSOSYACTIVBOTON.png" alt="Recursos y Actividades">
+    </a>
+     
+     
+  </section>
+<!-- Footer  -->
+    <footer class="footerSection">
+      <img src="./img/Logotipo-MARNBlanco.png"
+        alt="Logo del Ministerio de Medio Ambiente Y Recursos Naturales de El Salvador" />
+    </footer>
+  </main>
+</body>
+
+</html>

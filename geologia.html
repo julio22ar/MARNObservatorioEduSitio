@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <script defer src="/js/index.js"></script>
+    <title>El observatorio Educa | Geologia</title>
+</head>
+
+<body class="body-mobile">
+    <main class="mobile-content">
+        <section class="areasDeEstudioSectionGeologia">
+            <img src="./img/logo-peq-observatorio.svg"
+                alt="logo tamanio pequenio del observatorio del MInisterio De Mediao Ambiente Y Recursos Naturales de El Salvador" />
+
+                <nav class="menu">
+                    <button class="hamburger-menu">
+                      <span></span>
+                      <span></span>
+                      <span></span>
+                    </button>
+                    <ul class="menu-items">
+                      <li><a href="./index.html">Página  Principal</a></li>
+                      <li><a href="./vulcanologia.html">vulcanología</a></li>
+                      <li><a href="./meteorologia.html">Meteorología</a></li>
+                      <li><a href="./geologia.html">Geología</a></li>
+                      <li><a href="./oceanografia.html">Oceanografía</a></li>
+                      <li><a href="./sismologia.html">Sismología</a></li>
+                      <li><a href="">Recursos y actividades</a></li>
+                      <li><a href="">Preguntas Frecuentes</a></li>
+                      <li><a href="">Videos Educativos</a></li>
+          
+                    </ul>
+                  </nav>
+            <!-- Main content -->
+            <article class="temaPrincipal">
+                <img src="./img/mantoTerrestreDibuji.jpg" alt="imagen de las capas de la corteza terrestre ">
+                <h2>¿Como esta formado la tierra?</h2>
+
+                <body class="temaPrincipalContenedor">
+
+                </body>
+                <button>Ver mas</button>
+            </article>
+           
+            <!-- Secondary Content -->
+            <h3>Quieres conocer mas temas</h3>
+            <img class="botonLinksTemas" src="./img/botonGeneral.svg" alt="Boton para dirigirse a los links de los demas temas">
+        </section>
+
+        <!-- PARTE DE PREGUNTAS -->
+        <section class="faqSection">
+            <img class="dividerImage" src="./img/bannerDivisorCafePapelRasgado.svg" />
+            <div class="image-container">
+                <img src="./img/faqImage.png" />
+            </div>
+
+            <article>
+                <details>
+                    <summary>¿Qué es un volcán?</summary>
+                    <p>
+                        Un volcán es una estructura geológica por la que emergen el magma en
+                        forma de lava y gases del interior de la Tierra.
+                    </p>
+                </details>
+
+                <details>
+                    <summary>¿Qué es la hidrología?</summary>
+                    <p>
+                        La hidrología es la ciencia que se ocupa del estudio de la
+                        distribución, movimiento y propiedades del agua en la Tierra.
+                    </p>
+                </details>
+
+                <details>
+                    <summary>¿Qué es la meteorología?</summary>
+                    <p>
+                        La meteorología es la ciencia que estudia los fenómenos atmosféricos
+                        y las condiciones físicas que los producen.
+                    </p>
+                </details>
+
+                <details>
+                    <summary>¿Qué es la geología?</summary>
+                    <p>
+                        La geología es la ciencia que estudia la composición y estructura
+                        interna de la Tierra, y los procesos que la han afectado desde su
+                        origen.
+                    </p>
+                </details>
+
+                <details>
+                    <summary>¿Qué es la oceanografía?</summary>
+                    <p>
+                        La oceanografía es la ciencia que estudia la composición, ecología,
+                        geología y física del océano.
+                    </p>
+                </details>
+            </article>
+            <!-- FORMULARIO PARA MANDAR LAS PREGUNTAS -->
+            <aside class="form-container">
+                <h3>¿Tienes alguna pregunta?</h3>
+                <form action="mailto:00163922@uca.edu.sv" method="post" enctype="text/plain">
+                    <label for="name">Nombre:</label><br />
+                    <input type="text" id="name" name="name" pattern="[a-zA-Z0-9]{5,}" required /><br />
+                    <label for="question">Pregunta:</label><br />
+                    <textarea id="question" name="question"></textarea><br />
+                    <input type="submit" value="Enviar" />
+                </form>
+            </aside>
+        </section>
+        <!-- Footer  -->
+        <footer class="footerSection">
+            <img src="./img/Logotipo-MARNBlanco.png"
+                alt="Logo del Ministerio de Medio Ambiente Y Recursos Naturales de El Salvador" />
+        </footer>
+    </main>
+</body>
+
+</html>

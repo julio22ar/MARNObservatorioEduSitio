@@ -1,72 +1,131 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap");
 
-
-html {
-  overflow-x: hidden;
+@font-face {
+  font-family: 'Kids Komik';
+  src: url('../fonts/kidskomik/KidsKomik/KidsKomik.ttf') format('truetype');
 }
-
 * {
   box-sizing: border-box;
 }
 
+html, body {
+  overflow-x: hidden;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
 
 
 @media only screen and (max-width: 767px) {
-  /*COLORS*/
 
-  .desktop-content {
-    display: none;
-    /* Ocultar contenido para escritorio */
+  :root{
+    font-size: 16px;
+    font-family: 'Open Sans';
+    --text-primary: #b6b6b6;
+    --text-secondary: #ececec;
+    --bg-primary: #23232e;
+    --bg-secondary:141418;
+
   }
+/* NAVBAR */
 
-  @import url("https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap");
 
-  html,
-  body {
-    overflow-x: hidden;
-    margin: 0;
-    font-family: "Roboto", sans-serif;
+/* ------ */
+
+  /* MENU HAMBURGUER */
+  .hamburger-menu {
+    position: fixed;
+  top: 10px; /* Adjust as needed */
+  left: 10px; /* Cambiado de right a left */
+    display: inline-block;
+    cursor: pointer;
+    padding: 15px;
+  background-color: #7cb0d06d; /* Tomato color */
+  border-radius: 5px; /* Rounded corners */
+  z-index: 1;   
   }
-
-  * {
-    box-sizing: border-box;
+  .hamburger-menu:hover {
+    background-color: #f2d815; /* Darker tomato color on hover */
   }
-
-  body {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  .hamburger-menu span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background-color: #fff; /* White lines */
   }
-
+  .hamburger-menu span:nth-child(odd) {
+    background-color: #000000; /* Black lines for odd-numbered spans */
+  }
+  .menu {
+    position: fixed;
+    bottom: 0;
+    width: 20vw;
+    height: 5rem;
+    z-index: 1;
+}
+  .menu-items {
+    position: fixed; /* Cambiado de relative a fixed */
+    top: 0;
+    left: -100%; /* Inicialmente oculto a la izquierda */
+    height: 100%; /* Ocupa todo el alto de la pantalla */
+    background: #444; /* Color de fondo del menú */
+    display: flex; /* Para alinear los elementos verticalmente */
+    flex-direction: column; /* Para que los elementos se apilen verticalmente */
+    align-items: flex-start; /* Centra los elementos horizontalmente */
+    justify-content: center; /* Centra los elementos verticalmente */
+    transition: left 0.3s ease; /* Animación para deslizar el menú */
+    width: 60vw;
+    /* ... */
+}
+  .menu-items li {
+    margin: 5px; /* Add some space around each item */
+    padding: 10px; /* Add some space inside each item */
+    width: 200px; /* Width */
+    text-align: left;
+    font-family: 'Kids Komik'; /* Apply the font */
+    list-style: none;
+}
+.menu-items li a {
+  text-decoration: none; /* Remove the underline */
+  font-size: 25px; /* Larger text */
+    color: #ffffff;
+}
+/* ------------------------------- */
   /*fondos de Pantalla*/
-
+  
   .geo {
     background-image: url(../img/geologíaBoton_.svg);
   }
-
-  .sism {
+  
+  .sism{
     background-image: url(../img/sismologiaBoton_.svg);
   }
-
+  
   .hidro {
     background-image: url(../img/hidrologiaboton_.svg);
   }
 
-  .vulcan {
+  .vulcan{
     background-image: url(../img/Vulcanologiaboton_.svg);
 
   }
 
-  .meteo {
+  .meteo{
     background-image: url(../img/meteorologiaboton_.svg);
   }
 
-  .ocean {
+  .ocean{
     background-image: url(../img/oceanografiaboton_.svg);
   }
-
+  
   .box {
     background-size: cover;
     background-position: center;
@@ -79,85 +138,122 @@ html {
     margin-left: auto;
     margin-right: auto;
   }
-
+  
   .box:nth-of-type(even) {
     transform: translateX(-400%);
   }
-
+  
   .box:nth-of-type(odd) {
     transform: translateX(400%);
   }
-
+  
   .box.show {
     transform: translateX(0);
   }
-
-
+  
+ 
   .box:active {
     animation: wiggle 0.2s ease-in-out;
   }
-
-  .areasDeEstudioSection>img {
+  
+  .areasDeEstudioSection > img{
     width: 100%;
     height: auto;
   }
-
+  
   .areasDeEstudioSection,
   .faqSection {
     position: relative;
     width: 100%;
   }
+  .areasDeEstudioSectionVulcanologia.faqSection{
+    position: relative;
+    width: 100%;
+  }
 
+  .areasDeEstudioSectionVulcanologia > img{
+    width: 100%;
+    height: auto;
+  }
+  
   .areasDeEstudioSection {
     background-image: url(../img/fondoMobileMARN.svg);
     padding: 10%;
     background-size: cover;
   }
+  .areasDeEstudioSectionVulcanologia {
+    background-image: url(../img/fondoMobileVulca.svg);
+    padding: 10%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+  }
 
+  .areasDeEstudioSectionGeologia {
+    background-image: url(../img/fondoMobileGeo.svg);
+    padding: 10%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+  }
+
+  .areasDeEstudioSectionGeologia > img{
+    width: 100%;
+    height: auto;
+  }
+  
   .faqSection {
-    background-image: url(../img/faqFondoMARN.svg);
+    background-image: url(../img/faqFondoEstrellas.svg);
     padding: 20px;
     font-family: Arial, sans-serif;
   }
-
-
-
+  
+  
+  
   .divider-container img {
     display: block;
     width: 110%;
     height: auto;
     position: relative;
     top: -50px;
-    left: -18px;
-    /* Adjust this value to move the image more to the left */
+    left: -18px; /* Adjust this value to move the image more to the left */
+  }
+  .dividerImage {
+    width: 150%; /* Adjust this value to change the width of the image */
+    height: auto; /* This will maintain the aspect ratio of the image */
+    object-fit: cover; /* This will maintain the aspect ratio of the image */
+    position: relative;
+    top: -50px;
+    left: -20px; /* Adjust this value to move the image more to the left */
   }
 
-  .dividerImage {
+.dividerImage, .image-container img {
     width: 150%;
-    /* Adjust this value to change the width of the image */
     height: auto;
-    /* This will maintain the aspect ratio of the image */
     object-fit: cover;
-    /* This will maintain the aspect ratio of the image */
+}
+
+.dividerImage {
     position: relative;
     top: -50px;
     left: -20px;
-    /* Adjust this value to move the image more to the left */
-  }
+}
 
-  .image-container img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 70%;
-  }
+.image-container img {
+  display: block;
+  margin: 0 auto;
+  width: 70%;
+  
+}
+
 
   .image-container {
     position: relative;
     text-align: center;
+    padding-bottom: 3em;
   }
-
-
+  
+  
   .image-container h1 {
     position: absolute;
     top: 40%;
@@ -166,31 +262,29 @@ html {
     color: #ffffff;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   }
-
+  
   details {
-    border: 3px solid #a200ff;
+    background-color: rgba(241, 15, 230, 0.308); 
     border-radius: 4px;
     padding: 0.5em 0.5em 0;
     margin-bottom: 1em;
   }
-
+  
   summary {
     font-weight: bold;
     color: #fff;
     margin: -0.5em -0.5em 0;
-    padding: 0.5em;
-  }
-
+    padding: 0.5em;}
+  
   details[open] {
-    color: #fff;
+    color: #ffffff;
+    font-weight: bold;
     font-weight: bold;
     padding: 0.5em;
-    border-color: #f695f6;
-    background-color: rgba(241, 25, 231, 0.164);
-    border-radius: 10px;
-    /* Add this line */
+    background-color: rgba(241, 25, 230, 0.508); 
+    border-radius: 10px;/* Add this line */
   }
-
+  
   details[open] summary {
     margin-bottom: 0.5em;
   }
@@ -198,27 +292,27 @@ html {
   .form-container {
     padding: 20px;
     border-radius: 5px;
-    max-width: 500px;
-    margin: auto;
+    max-width: 90%;
+    margin: auto; 
   }
-
+  
   .form-container h3 {
     text-align: center;
     color: #fff;
     margin-bottom: 20px;
   }
-
+  
   .form-container form {
     display: flex;
     flex-direction: column;
   }
-
+  
   .form-container label {
     color: #fff;
     font-weight: bold;
     margin-bottom: 5px;
   }
-
+  
   .form-container input[type="text"],
   .form-container input[type="email"],
   .form-container textarea {
@@ -228,14 +322,14 @@ html {
     margin-bottom: 20px;
     transition: box-shadow 0.3s ease;
   }
-
+  
   .form-container input[type="text"]:focus,
   .form-container input[type="email"]:focus,
   .form-container textarea:focus {
     box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
     outline: none;
   }
-
+  
   .form-container input[type="submit"] {
     padding: 10px 20px;
     background-color: #007bff;
@@ -246,11 +340,11 @@ html {
     cursor: pointer;
     transition: background-color 0.3s ease;
   }
-
+  
   .form-container input[type="submit"]:hover {
     background-color: #0056b3;
   }
-
+  
   .footerSection {
     background-color: rgb(50, 62, 72);
     display: flex;
@@ -258,236 +352,115 @@ html {
     padding: 10px;
     flex-wrap: wrap;
   }
-
+  
   .footerSection img {
     margin-right: 10px;
     max-width: 100%;
     height: auto;
   }
 
+  .actividadesExtra {
+    display: block; /* Coloca los elementos uno al lado del otro */
+    justify-content: space-around; /* Distribuye los elementos uniformemente en el contenedor */
+    background-image: url(../img/fondoMobileVulca.svg); /* Aplica el fondo */
+    padding: 2em; /* Agrega algo de espacio alrededor de los elementos */
+    background-size: cover; /* Asegura que el fondo cubra toda la sección */
+    background-repeat: no-repeat; /* Evita que el fondo se repita */
+    background-attachment: fixed; 
+    text-align: center;
+}
+
+.actividadesExtra > .boton {
+  flex: 1;
+  margin: 0.5em auto;  /* Agrega algo de espacio alrededor de cada botón */
+  display: inline-block; /* Coloca los elementos uno al lado del otro */
+}
+
+.actividadesExtra > .boton > img {
+    width: 50%; /* Hace que las imágenes ocupen todo el ancho disponible */
+    height: auto; /* Mantiene la proporción de las imágenes */
+}
+/* HIDROLOGIA  */
+
+/* Navegación */
+
+body-mobile {
+  background-color: #F28B00;
+}
+mobile-content {
+  background-color: #fbc57e79;
+}
+/* Contenido principal */
+.temaPrincipal {
+  background-color: #ffffffbc;
+  border-radius: 1rem; /* Use rem instead of px */
+  box-shadow: 0 0.2rem 1rem rgba(0, 0, 0, 0.1);
+  padding: 2rem; /* Use rem instead of px */
+  max-width: 50rem; /* Use rem instead of px */
+  margin: 2rem auto;
+  text-align: justify;
+  box-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.4);
+}
+
+.temaPrincipal img {
+  width: 100%;
+  height: auto;
 
 }
+.temaPrincipal h2 {
+  margin-top: 0;
+}
+
+.temaPrincipal p {
+  line-height: 1.6;
+}
+
+.temaPrincipal button {
+  background-color: #c68342;
+  color: #fff;
+  border: none;
+  border-radius: 0.5rem; /* Use rem instead of px */
+  padding: 1rem 2rem; /* Use rem instead of px */
+  text-transform: uppercase;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.temaPrincipal button:hover {
+  background-color: #00e1ff76;
+}
+
+/* Contenido secundario */
+.infoSecundaria {
+  background-color: #ffffffbc;
+  border-radius: 1rem;
+  box-shadow: 0 0.2rem 1rem rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  max-width: 50rem;
+  margin: 2rem auto;
+  text-align: justify;
+  overflow: hidden;
+  height: 300px;
+  height: 300px; /* Adjust as needed */
+}
+.infoSecundaria h3 {
+  margin-top: 0;
+}
+
+.infoSecundaria p {
+  line-height: 1.6;
+}
+
+
+/* Footer */
+footer {
+}
+
+
 
 @media only screen and (min-width: 768px) {
   .mobile-content {
-    display: none;
-    /* Ocultar contenido para móviles y tabletas en escritorios */
+    display: none; /* Ocultar contenido para móviles y tabletas en escritorios */
   }
-
-
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-
-  .body-desktop {
-
-    margin: 0;
-  }
-
-  .header-desktop {
-    background-image: url(../img/HEADER\ GENERAL_.svg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 30vh;
-    z-index: 3;
-    position: relative;
-    display: flex;
-    justify-content: flex-start;
-  }
-
-  .header-desktop #logo-desktop {
-
-    width: 45%;
-    /* Controla el ancho de la imagen */
-    height: auto;
-    /* Mantiene la relación de aspecto de la imagen */
-    margin-right: -2%;
-    /* Ajusta este valor según tus necesidades */
-  }
-
-  .button-desktop {
-
-    transform: translateX(-20%);
-    margin-right: -10%;
-    /* Ajusta este valor según tus necesidades */
-    margin-left: 1%;
-    width: 25%;
-    /* Ajusta este valor según tus necesidades */
-    height: auto;
-  }
-
-  .button-4 {
-
-    transform: translateX(-20%);
-    margin-right: -1%;
-    /* Ajusta este valor según tus necesidades */
-    margin-left: 2%;
-    width: 25%;
-    /* Ajusta este valor según tus necesidades */
-    height: auto;
-
-  }
-
-
-  .zonademapa-desktop {
-    background-image: url(../img/atrasdelmapa.svg);
-    background-size: cover;
-    margin-top: -175px;
-    height: 150vh;
-    z-index: 2;
-    position: relative;
-    display: flex;
-  }
-
-  .zonademapa-desktop #explora-mapa {
-    width: 65vw;
-    /* Controla el ancho de la imagen */
-    max-width: 900px;
-    min-width: 328px;
-    margin: auto;
-    height: 30vh;
-    transform: translateX(-10vh);
-    transform: translateY(-30vh);
-    padding: 0;
-
-  }
-
-  .mapa {
-    background-image: url(../img/MAPA\ HOME.svg);
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 50%;
-    width: 125%;
-    transform: translate(-10vh, 20vh);
-  }
-
-  .mapa #meteoreologiabutton {
-    height: 30%;
-    width: 30%;
-    transform: translate(-13vh, 23vh);
-  }
-
-  .mapa #geologiabutton {
-
-    height: 30%;
-    width: 30%;
-    transform: translate(-40vh, 45vh);
-  }
-
-  .mapa #sismologiabutton {
-
-    height: 30%;
-    width: 30%;
-    transform: translate(-30vh, 15vh);
-
-  }
-
-  .mapa #hidrologiabutton {
-    height: 30%;
-    width: 30%;
-
-    transform: translate(55vh, 15vh);
-  }
-
-  .mapa #vulcanologiabutton {
-
-    height: 30%;
-    width: 30%;
-    transform: translate(65vh, -10vh);
-  }
-
-  .mapa #oceanografiabutton {
-    height: 30%;
-    width: 30%;
-
-    transform: translate(20vh, 38vh);
-  }
-
-  .grasszone-desktop {
-    background-image: url(../img/grassbg.svg);
-    background-size: cover;
-    height: 275vh;
-    z-index: 4;
-    position: relative;
-    margin-top: -175px;
-
-
-  }
-
-  .parrafobservatorio {
-    background: rgba(255, 255, 255, 0.5);
-    width: 50%;
-    font-family: 'Afacad', sans-serif;
-    border-radius: 20px;
-    transform: translate(100vh, -50vh);
-    font-size: 2vw;
-    text-align: justify;
-    padding: 20px;
-    line-height: -10px;
-  }
-
-  .grasszone-desktop #elobservatoriobanner {
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-  }
-
-  .grasszone-desktop #elobservatorioimg{
-    transform: translateY(10vh);
-  }
-
-  .bannerdivisor-desktop {
-    background-image: url(../img/bannerdivisor.svg);
-    background-size: cover;
-    height: 25%;
-    z-index: 4;
-    display: flex;
-
-    align-items: center;
-    justify-content: flex-end;
-
-  }
-
-
-
-
-
-  .lakezone-desktop {
-
-    background-image: url(../img/fondolago.svg);
-    background-size: cover;
-    height: 175vh;
-    z-index: 1;
-    position: relative;
-    margin-top: -225px;
-
-  }
-
-  .spacezone-desktop {
-    background-image: url(../img/faqFondoMARN.svg);
-    height: 1528px;
-    /* Doble de la altura de la imagen de fondo (2 * 764px) */
-    background-size: cover;
-    /* El fondo se repite dos veces verticalmente */
-    background-repeat: repeat-y;
-    /* El fondo se repite en el eje y */
-    z-index: 0;
-    position: relative;
-    margin-top: -100px;
-  }
-
-  .footer-desktop {
-    background-image: url(../img/footer.svg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 50vh;
-    z-index: 5;
-    position: relative;
-    margin-top: -150px;
-  }
-
-
+}
 }

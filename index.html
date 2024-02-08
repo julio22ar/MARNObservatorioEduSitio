@@ -1,176 +1,97 @@
+<!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/styles.css" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Afacad">
     <script defer src="/js/index.js"></script>
-    <title>pruebasBEllacasEdu</title>
-</head>
-<div class="mobile-content">
+    <title>El observatorio Educa</title>
+  </head>
+  <body class="body-mobile">
+    <main class="mobile-content">
+      <section class="areasDeEstudioSection">
+        <img
+          src="./img/logo-peq-observatorio.svg"
+          alt="logo tamanio pequenio del observatorio del MInisterio De Mediao Ambiente Y Recursos Naturales de El Salvador"
+        />
 
-    <body class="body-mobile">
-        <section class="areasDeEstudioSection">
-            <img src="./img/logo-peq-observatorio.svg"
-                alt="logo tamanio pequenio del observatorio del MInisterio De Mediao Ambiente Y Recursos Naturales de El Salvador" />
+        <nav>
+          <a class="box hidro show" href="./hidrologia.html"></a>
+          <a class="box vulcan show" href="./vulcanologia.html"></a>
+          <a class="box meteo show" href="ruta/a/pagina/meteorologia.html"></a>
+          <a class="box geo show" href="./geologia.html"></a>
+          <a class="box ocean show" href="ruta/a/pagina/ocenanografia.html"></a>
+          <a class="box sism show" style="text-decoration: none" href="ruta/a/pagina/ocenanografia.html"></a>
+        </nav>
+      </section>
 
-            <div class="box hidro show">
-                <a href="ruta/a/pagina/hidrologia.html">
-                </a>
-            </div>
-            <div class="box vulcan show">
-                <a href="ruta/a/pagina/vulcanologia.html">
-                </a>
-            </div>
-            <div class="box meteo show">
-                <a href="ruta/a/pagina/meteorologia.html">
-                </a>
-            </div>
-            <div class="box geo show">
-                <a href="ruta/a/pagina/geologia.html">
-                </a>
-            </div>
+      <section class="faqSection">
+        <img class="dividerImage" src="./img/bannerDivisorCafePapelRasgado.svg" />
+        <div class="image-container">
+          <img src="./img/faqImage.png" />
+        </div>
 
-            <div class="box ocean show">
-                <a href="ruta/a/pagina/ocenanografia.html">
-                </a>
-            </div>
-
-            <div class="box sism show">
-                <a style="text-decoration: none" href="ruta/a/pagina/ocenanografia.html">
-                </a>
-            </div>
-        </section>
-
-        <section class="faqSection">
-            <img class="dividerImage" src="./img/bannerDivisorCafePapelRasgado.svg" />
-            <div class="image-container">
-                <img src="./img/woddenboardart-01.svg" />
-                <h1>Preguntas Frecuentes</h1>
-            </div>
-
-            <!-- PREGUNTAS DE VULCANOLOGÍA -->
-            <details>
-                <summary>¿Qué es un volcán?</summary>
-                <p>
-                    Un volcán es una estructura geológica por la que emergen el magma en
-                    forma de lava y gases del interior de la Tierra.
-                </p>
-            </details>
-
-            <!-- PREGUNTAS DE HIDROLOGÍA -->
-            <details>
-                <summary>¿Qué es la hidrología?</summary>
-                <p>
-                    La hidrología es la ciencia que se ocupa del estudio de la
-                    distribución, movimiento y propiedades del agua en la Tierra.
-                </p>
-            </details>
-
-            <!-- PREGUNTAS DE METEOROLOGÍA -->
-            <details>
-                <summary>¿Qué es la meteorología?</summary>
-                <p>
-                    La meteorología es la ciencia que estudia los fenómenos atmosféricos
-                    y las condiciones físicas que los producen.
-                </p>
-            </details>
-
-            <!-- PREGUNTAS DE GEOLOGÍA -->
-            <details>
-                <summary>¿Qué es la geología?</summary>
-                <p>
-                    La geología es la ciencia que estudia la composición y estructura
-                    interna de la Tierra, y los procesos que la han afectado desde su
-                    origen.
-                </p>
-            </details>
-
-            <!-- PREGUNTAS DE OCEANOGRAFÍA -->
-            <details>
-                <summary>¿Qué es la oceanografía?</summary>
-                <p>
-                    La oceanografía es la ciencia que estudia la composición, ecología,
-                    geología y física del océano.
-                </p>
-            </details>
-
-            <!-- FORMULARIO DE PREGUNTAS -->
-            <div class="form-container">
-                <h3>¿Tienes alguna pregunta?</h3>
-                <!-- elobservatorioeduca@amb iente.gob.sv -->
-                <form action="mailto:00163922@uca.edu.sv" method="post" enctype="text/plain">
-                    <label for="name">Nombre:</label><br />
-                    <input type="text" id="name" name="name" pattern="[a-zA-Z0-9]{5,}" required /><br />
-                    <label for="question">Pregunta:</label><br />
-                    <textarea id="question" name="question"></textarea><br />
-                    <input type="submit" value="Enviar" />
-                </form>
-            </div>
-        </section>
-
-        <footer class="footerSection">
-            <img src="./img/Logotipo-MARNBlanco.png"
-                alt="Logo del Ministerio de Medio Ambiente Y Recursos Naturales de El Salvador" />
-        </footer>
-    </body>
-</div>
-<div class="desktop-content">
-
-    <body class="body-desktop">
-        <header class="header-desktop">
-            <img id="logo-desktop" src="./img/logo-peq-observatorio.svg" alt="logo">
-            <img class="button-desktop" src="./img/homebutton.svg" alt="button1">
-            <img class="button-desktop" src="./img/resourcesandactivities.svg" alt="button2">
-            <img class="button-desktop" src="./img/FAQS.svg" alt="button3">
-            <img class="button-4" src="./img/videosbutton.svg" alt="button4">
-        </header>
-        <section class="zonademapa-desktop">
-
-                <img id="explora-mapa" src="./img/Explora nuestras áreas BANNER.svg" alt="explora">
-       
-                <div class="mapa">
-                    <img id="meteoreologiabutton" src="./img/meteoreologiabutton.svg" alt="meteorologia">
-                    <img id="geologiabutton" src="./img/geologiabutton.svg" alt="geologia">
-                    <img id="sismologiabutton" src="./img/sismologiabutton.svg" alt="sismologia">
-                    <img id="hidrologiabutton" src="./img/hidrologiabutton.svg" alt="hidrologia">
-                    <img id="vulcanologiabutton" src="./img/vulcanologiabutton.svg" alt="vulcanologia">
-                    <img id="oceanografiabutton" src="./img/oceanografiabutton.svg" alt="oceanografía">
-
-                </div>
-                
-            
-        </section>
-        <section class = "grasszone-desktop">   
-            <img id="elobservatoriobanner" src="./img/observarotiobanner.svg" alt="banner">
-            <img id="elobservatorioimg" src="./img/observatoybuilding.svg" alt="observatorioimg">
-            <p class="parrafobservatorio">
-                El Observatorio de Amenazas y Recursos Naturales es una Dirección del Ministerio de Medio Ambiente. Nos dedicamos a la observación continua, el estudio y análisis de los fenómenos naturales que pueden afectar a El Salvador. Contamos con un genial equipo de profesionales expertos en Sismología, Vulcanología, Meteorología, Geología, Oceanografía e Hidrología. Además, tenemos tecnología increíble en todo el país, y hasta ocupamos información capturada desde el espacio!.
-                Empezamos como SNET en 2002, después del huracán "Mitch" y los terremotos de 2001. Desde entonces, no hemos parado. ¡Nuestra misión es informarte y alertarte!
+        <article>
+          <details>
+            <summary>¿Qué es un volcán?</summary>
+            <p>
+              Un volcán es una estructura geológica por la que emergen el magma en
+              forma de lava y gases del interior de la Tierra.
             </p>
-            
-            <div class="bannerdivisor-desktop">
-                
-            
-                <img  src="./img/Escuelita de Riesgo.png" alt="riezgo">
-            
-            </div>
-        </section>
-        <section class="lakezone-desktop">
-        </section>
-        <section class="spacezone-desktop">
-        </section>
-        <footer class="footer-desktop">
+          </details>
 
-        </footer>
+          <details>
+            <summary>¿Qué es la hidrología?</summary>
+            <p>
+              La hidrología es la ciencia que se ocupa del estudio de la
+              distribución, movimiento y propiedades del agua en la Tierra.
+            </p>
+          </details>
 
+          <details>
+            <summary>¿Qué es la meteorología?</summary>
+            <p>
+              La meteorología es la ciencia que estudia los fenómenos atmosféricos
+              y las condiciones físicas que los producen.
+            </p>
+          </details>
 
+          <details>
+            <summary>¿Qué es la geología?</summary>
+            <p>
+              La geología es la ciencia que estudia la composición y estructura
+              interna de la Tierra, y los procesos que la han afectado desde su
+              origen.
+            </p>
+          </details>
 
-    </body>
+          <details>
+            <summary>¿Qué es la oceanografía?</summary>
+            <p>
+              La oceanografía es la ciencia que estudia la composición, ecología,
+              geología y física del océano.
+            </p>
+          </details>
+        </article>
 
+        <aside class="form-container">
+          <h3>¿Tienes alguna pregunta?</h3>
+          <form action="mailto:00163922@uca.edu.sv" method="post" enctype="text/plain">
+            <label for="name">Nombre:</label><br />
+            <input type="text" id="name" name="name" pattern="[a-zA-Z0-9]{5,}" required/><br />
+            <label for="question">Pregunta:</label><br />
+            <textarea id="question" name="question"></textarea><br />
+            <input type="submit" value="Enviar" />
+          </form>
+        </aside>
+      </section>
 
-
-</div>
-
+      <footer class="footerSection">
+        <img
+          src="./img/Logotipo-MARNBlanco.png"
+          alt="Logo del Ministerio de Medio Ambiente Y Recursos Naturales de El Salvador"
+        />
+      </footer>
+    </main>
+  </body>
 </html>
