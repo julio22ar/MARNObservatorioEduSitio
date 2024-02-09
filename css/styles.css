@@ -30,13 +30,56 @@ body {
     font-family: 'Open Sans';
     --text-primary: #b6b6b6;
     --text-secondary: #ececec;
-    --bg-primary: #23232e;
-    --bg-secondary:141418;
+    --bg-primary: #ffffff;
+    --bg-secondary:#141418;
 
   }
-/* NAVBAR */
+  /* COdigo reusable para el sidebar */
+  .sidebar .text{
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--text-primary);
+  }
+  .sidebar .image{
+    min-width: 60px;
+    display: flex;
+    align-items: center;
+    height: auto; 
+max-width: 100%;
+  }
+/* SIDEBAR */
+.sidebar{
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 250px;
+  background: var(--bg-primary);
+  padding: 10px 24px;
+}
+.sidebar image-text img{
+width: 40px;
+border-radius: 6px;
+}
 
+.sidebar header .image-text{
+  display: flex;
+  align-items: center;
+}
 
+header .image-text .header-text{
+  display: flex;
+  flex-direction: column;
+}
+
+.header-text .name{
+  font-weight: 600px;
+  
+}
+
+.header-text .profession{
+  margin-top: -2px;
+}
 /* ------ */
 
   /* MENU HAMBURGUER */
