@@ -1,42 +1,57 @@
-const boxes = document.querySelectorAll('.box');
-window.addEventListener('scroll', checkBoxes);
+const body = document.querySelector('body');
+const toggle = body.querySelector(".toggle");
+const searchBtn = body.querySelector(".search-box");
+const modeSwitch = body.querySelector(".toggle-switch");
+const modeText = body.querySelector(".mode-text");
 
-checkBoxes();
+// Declaración de la variable 'sidebar' antes de su uso
+const sidebar = body.querySelector('.sidebar');
 
-function checkBoxes() {
-  const triggerBottom = window.innerHeight / 5 * 4;
-
-  boxes.forEach((box) => {
-    const boxTop = box.getBoundingClientRect().top;
-
-    if (boxTop < triggerBottom) {
-      box.classList.add('show');
-    } else {
-      box.classList.remove('show');
-    }
-  });
-}
-
-const hamburgerMenu = document.querySelector('.hamburger-menu');
-const menu = document.querySelector('.menu');
-const menuItems = document.querySelector('.menu-items');
-
-// Set the initial state of menuItems.style.left
-menuItems.style.left = '-100%';
-
-const toggleMenu = () => {
-    menuItems.style.left = menuItems.style.left === '-100%' ? '0' : '-100%';
-}
-
-hamburgerMenu.addEventListener('click', (event) => {
-    event.stopPropagation(); // Prevent the event from bubbling up to the document
-    toggleMenu();
+toggle.addEventListener("click", () => {
+    sidebar.classList.toggle("close");
 });
 
-document.addEventListener('click', (event) => {
-    const isClickInsideMenu = menu.contains(event.target);
+searchBtn.addEventListener("click", () => {
+    sidebar.classList.remove("close");
+});
 
-    if (!isClickInsideMenu && menuItems.style.left === '0') {
-        toggleMenu();
+modeSwitch.addEventListener("click", () => {
+    body.classList.toggle("dark");
+
+    if (body.classList.contains("dark")) {
+        modeText.innerText = "Light mode";
+    } else {
+        modeText.innerText = "Dark mode";
     }
+});
+
+toggle.addEventListener("touchstart", () => {
+    sidebar.classList.toggle("close");
+});
+
+searchBtn.addEventListener("touchstart", () => {
+    sidebar.classList.remove("close");
+});
+
+modeSwitch.addEventListener("touchstart", () => {
+    body.classList.toggle("dark");
+
+    if (body.classList.contains("dark")) {
+        modeText.innerText = "Light mode";
+    } else {
+        modeText.innerText = "Dark mode";
+    }
+});
+
+// Función para alternar el sidebar cuando se hace clic en el botón hamburguesa
+function toggleSidebar() {
+    sidebar.classList.toggle("close");
+}
+
+const hamburger = document.querySelector('.hamburger');
+const home = document.querySelector('.home');
+
+hamburger.addEventListener('click', function() {
+  sidebar.classList.toggle('close');
+  home.classList.toggle('hidden');
 });

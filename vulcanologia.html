@@ -5,35 +5,125 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="./css/styles.css" />
+  <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+
   <script defer src="/js/index.js"></script>
   <title>El observatorio Educa | Vulcanologia</title>
 </head>
 
 <body class="body-mobile">
+  <!-- ============NUEVO SIDEBAR============= -->
+
+<nav class="sidebar close">
+  <header>
+      <div class="image-text">
+          <span class="image">
+              <img src="./img/log" alt="">
+          </span>
+
+          <div class="text logo-text">
+            <span class="name">El Observatorio Educa</span>
+              <span class="profession">Ministerio de Medio Ambiente  y</span>
+              <span class="profession"> Recursos Naturales</span>
+          </div>
+      </div>
+      <i class='bx bx-chevron-right toggle'></i>
+  </header>
+
+  <div class="menu-bar">
+      <div class="menu">
+
+          <li class="search-box">
+              <i class='bx bx-search icon'></i>
+              <input type="text" placeholder="Search...">
+          </li>
+
+          <ul class="menu-links">
+              <li class="nav-link">
+                  <a href="./index.html">
+                      <i class='bx bx-home-alt icon' ></i>
+                      <span class="text nav-text">Pagina Principal</span>
+                  </a>
+              </li>
+
+              <li class="nav-link">
+                  <a href="./vulcanologia.html">
+                      <i class='bx bx-bar-chart-alt-2 icon' ></i>
+                      <span class="text nav-text">vulcanología</span>
+                  </a>
+              </li>
+
+              <li class="nav-link">
+                  <a href="./meteorologia.html">
+                      <i class='bx bxs-cloud-rain icon'></i>
+                      <span class="text nav-text">Meteorología</span>
+                  </a>
+              </li>
+
+              <li class="nav-link">
+                  <a href="./geologia.html">
+                      <i class='bx bx-pie-chart-alt icon' ></i>
+                      <span class="text nav-text">Geología</span>
+                  </a>
+              </li>
+
+              <li class="nav-link">
+                  <a href="./oceanografia.html">
+                      <i class='bx bx-water icon'></i>
+                      <span class="text nav-text">Oceanografía</span>
+                  </a>
+              </li>
+
+              <li class="nav-link">
+                  <a href="./sismologia.html">
+                      <i class='bx bxs-error icon'></i>
+                      <span class="text nav-text">Sismología</span>
+                  </a>
+              </li>
+              <li class="nav-link">
+                  <a href="#">
+                      <i class='bx bx-wallet icon' ></i>
+                      <span class="text nav-text">Recursos y actividades</span>
+                  </a>
+              </li>
+              <li class="nav-link">
+                  <a href="#">
+                      <i class='bx bx-folder-open icon'></i>
+                      <span class="text nav-text">Preguntas Frecuentes</span>
+                  </a>
+              </li>
+              <li class="nav-link">
+                  <a href="#">
+                      <i class='bx bx-battery icon'></i>
+                      <span class="text nav-text">Videos Educativos</span>
+                  </a>
+              </li>
+              <li class="">
+                  <a href="#">
+                      <i class='bx bxs-file-pdf icon'></i>
+                      <span class="text nav-text">Recursos y actividades</span>
+                  </a>
+              </li>
+
+          </ul>
+      </div>
+
+</nav>
+
+<button class="hamburger" onclick="toggleSidebar()">
+  <span class="hamburger-line"></span>
+  <span class="hamburger-line"></span>
+  <span class="hamburger-line"></span>
+
+</button>
+
+<!-- ================== -->
+
   <main class="mobile-content">
     <section class="areasDeEstudioSectionVulcanologia">
       <img src="./img/logo-peq-observatorio.svg"
         alt="logo tamanio pequenio del observatorio del MInisterio De Mediao Ambiente Y Recursos Naturales de El Salvador" />
 
-        <nav class="menu">
-          <button class="hamburger-menu">
-            <span></span>
-            <span></span>
-            <span></span>
-          </button>
-          <ul class="menu-items">
-            <li><a href="./index.html">Página  Principal</a></li>
-            <li><a href="./vulcanologia.html">vulcanología</a></li>
-            <li><a href="./meteorologia.html">Meteorología</a></li>
-            <li><a href="./geologia.html">Geología</a></li>
-            <li><a href="./oceanografia.html">Oceanografía</a></li>
-            <li><a href="./sismologia.html">Sismología</a></li>
-            <li><a href="">Recursos y actividades</a></li>
-            <li><a href="">Preguntas Frecuentes</a></li>
-            <li><a href="">Videos Educativos</a></li>
-
-          </ul>
-        </nav>
 <!-- Main content -->
       <article class="temaPrincipal">
       <img src="./img/santaAnaVolcan.jpg" alt="imagen del volcan de santa ana ">
@@ -52,6 +142,8 @@
         </body>
         <button>Ver mas</button>
       </article>
+
+      
       <!-- Secondary Content -->
       <aside class="infoSecundaria">
         <article class="respuestaCorta">
