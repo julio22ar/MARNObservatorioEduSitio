@@ -403,6 +403,8 @@ body.dark .home .text{
  
 /* ------------------------------- */
   /*fondos de Pantalla*/
+
+  /* BOTONES PARA EL MENU DE LA PAGINA PRINCIPAL */
   
   .geo {
     background-image: url(../img/geologíaBoton_.svg);
@@ -498,6 +500,15 @@ body.dark .home .text{
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed; 
+  }
+
+  .areasDeEstudioSectionMeteorologia{
+    background-image: url(../img/fondoDePantallaKidsMeteo.svg);
+    padding: 10%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: block; 
   }
 
   .areasDeEstudioSectionGeologia > img{
