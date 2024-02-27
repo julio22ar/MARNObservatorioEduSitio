@@ -1,11 +1,38 @@
+// Código del menú hamburguesa
 const body = document.querySelector('body');
+const sidebar = body.querySelector('.sidebar');
+const hamburger = document.querySelector('.hamburger');
+const home = document.querySelector('.home');
+
+function toggleSidebar() {
+  sidebar.classList.toggle('close');
+  home.classList.toggle('hidden');
+}
+
+hamburger.addEventListener('click', toggleSidebar);
+
+// Código del slider
+var swiper = new Swiper('.swiper-container', {
+  slidesPerView: 1,
+  spaceBetween: 10,
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+  autoplay: {
+    delay: 6000,
+  },
+});
+
+// Resto del código para el modo oscuro y otros eventos
 const toggle = body.querySelector(".toggle");
 const searchBtn = body.querySelector(".search-box");
 const modeSwitch = body.querySelector(".toggle-switch");
 const modeText = body.querySelector(".mode-text");
-
-// Declaración de la variable 'sidebar' antes de su uso
-const sidebar = body.querySelector('.sidebar');
 
 toggle.addEventListener("click", () => {
     sidebar.classList.toggle("close");
@@ -41,17 +68,4 @@ modeSwitch.addEventListener("touchstart", () => {
     } else {
         modeText.innerText = "Dark mode";
     }
-});
-
-// Función para alternar el sidebar cuando se hace clic en el botón hamburguesa
-function toggleSidebar() {
-    sidebar.classList.toggle("close");
-}
-
-const hamburger = document.querySelector('.hamburger');
-const home = document.querySelector('.home');
-
-hamburger.addEventListener('click', function() {
-  sidebar.classList.toggle('close');
-  home.classList.toggle('hidden');
 });
