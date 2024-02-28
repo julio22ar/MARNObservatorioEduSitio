@@ -1,71 +1,77 @@
-// Código del menú hamburguesa
-const body = document.querySelector('body');
-const sidebar = body.querySelector('.sidebar');
-const hamburger = document.querySelector('.hamburger');
-const home = document.querySelector('.home');
+  // CODIGO HAMBURGUESA
+  const body = document.querySelector('body');
+  const toggle = body.querySelector(".toggle"); // Se cambió "body.querySelector('.hamburger')" a "body.querySelector('.toggle')"
+  const searchBtn = body.querySelector(".search-box");
+  const modeSwitch = body.querySelector(".toggle-switch");
+  const modeText = body.querySelector(".mode-text");
+  // CODIGO SLIDER DESKTOP
+   // Se corrigió la declaración de la variable 'sidebar' para que no sea 'var'
+ 
 
-function toggleSidebar() {
-  sidebar.classList.toggle('close');
-  home.classList.toggle('hidden');
-}
+  const sidebar = body.querySelector('.sidebar');
+  var swiper = new Swiper('.swiper-container', {
+    slidesPerView: 1,
+    spaceBetween: 10,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    autoplay: {
+      delay: 6000,
+    },
+  });
 
-hamburger.addEventListener('click', toggleSidebar);
-
-// Código del slider
-var swiper = new Swiper('.swiper-container', {
-  slidesPerView: 1,
-  spaceBetween: 10,
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
-  pagination: {
-    el: '.swiper-pagination',
-    clickable: true,
-  },
-  autoplay: {
-    delay: 6000,
-  },
-});
-
-// Resto del código para el modo oscuro y otros eventos
-const toggle = body.querySelector(".toggle");
-const searchBtn = body.querySelector(".search-box");
-const modeSwitch = body.querySelector(".toggle-switch");
-const modeText = body.querySelector(".mode-text");
-
-toggle.addEventListener("click", () => {
+ 
+  // Función para alternar el sidebar cuando se hace clic en el botón hamburguesa
+  function toggleSidebar() {
     sidebar.classList.toggle("close");
-});
+  }
 
-searchBtn.addEventListener("click", () => {
+  toggle.addEventListener("click", toggleSidebar);
+  toggle.addEventListener("touchstart", toggleSidebar);
+
+  searchBtn.addEventListener("click", () => {
     sidebar.classList.remove("close");
-});
+  });
 
-modeSwitch.addEventListener("click", () => {
+  searchBtn.addEventListener("touchstart", () => {
+    sidebar.classList.remove("close");
+  });
+
+  modeSwitch.addEventListener("click", () => {
     body.classList.toggle("dark");
 
     if (body.classList.contains("dark")) {
-        modeText.innerText = "Light mode";
+      modeText.innerText = "Light mode";
     } else {
-        modeText.innerText = "Dark mode";
+      modeText.innerText = "Dark mode";
     }
-});
+  });
 
-toggle.addEventListener("touchstart", () => {
-    sidebar.classList.toggle("close");
-});
 
-searchBtn.addEventListener("touchstart", () => {
-    sidebar.classList.remove("close");
-});
 
-modeSwitch.addEventListener("touchstart", () => {
-    body.classList.toggle("dark");
+  // Se eliminó el código redundante para el hamburger
 
-    if (body.classList.contains("dark")) {
-        modeText.innerText = "Light mode";
-    } else {
-        modeText.innerText = "Dark mode";
-    }
-});
+  const boxes= document.querySelectorAll('.box');
+  window.addEventListener('scroll', checkBoxes);
+
+  checkBoxes();
+
+  function checkBoxes(){
+    const triggerBottom = window.innerHeight / 5 *4;
+
+    boxes.forEach((box) => {
+      const boxTop = box.getBoundingClientRect().top;
+
+      if(boxTop < triggerBottom){
+        box.classList.add('show');
+      }else{
+        box.classList.remove('show');
+      }
+    });
+  }
+
