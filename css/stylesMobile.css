@@ -395,7 +395,7 @@ body.dark .home .text{
 }
 
 /* ------------------------------- */
-  /*fondos de Pantalla MOBILE*/
+  /*Botones menu index MOBILE*/
   
   .geo {
     background-image: url(../img/geologíaBoton_.svg);
@@ -745,6 +745,27 @@ mobile-content {
 
 .infoSecundaria p {
   line-height: 1.6;
+}
+
+.gridLayout{
+  display: grid;
+  gap: 1rem;
+  grid-auto-rows: 22rem;
+  grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+}
+.introduccion {
+  display: grid;
+}
+
+.introImage {
+  grid-column: 1 / span 2; /* Span two columns */
+  height: auto;
+  width: 70%;
+  justify-content: center;
+}
+
+.introText {
+  grid-column: 2 / -1; /* Start from the second column and span to the end */
 }
 
 
