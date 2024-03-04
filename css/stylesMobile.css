@@ -755,7 +755,7 @@ mobile-content {
 
 .gridLayout{
   display: grid;
-  gap: 1rem;
+  gap: 5rem;
   grid-auto-rows: 22rem;
   grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
 }
@@ -792,11 +792,28 @@ margin-top: 20%;
 }
 
 .preguntasFrecuentes{
-  background-color: #f0eade;
-  border-radius: 1rem;
-  box-shadow: #23232e 0px 0px 10px;
+display: grid;
 
 }
 
+.preguntasFaqImagen{
+  height: auto;
+  width: 15rem;
+  display: flex;
+  margin: 0 auto; /* Centra horizontalmente */
+  text-align: center; /* Centra el contenido dentro del contenedor */
+}
+
+.preguntasFaqTexto{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-radius: 1rem;
+  background-color: #F28B00;
+  box-shadow: #23232e 0px 0px 10px;
+  padding: 10px;
+}
 
 }
