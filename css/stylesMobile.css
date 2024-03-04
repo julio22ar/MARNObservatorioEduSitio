@@ -24,7 +24,6 @@
     --text-secondary: #ececec;
     --bg-primary: #23232e;
     --bg-secondary:141418;
-    --body-color: #E4E9F7;
     --sidebar-color: #ffffff;
     --primary-color: #695CFE;
     --primary-color-light: #F6F5FF;
@@ -479,12 +478,19 @@ body.dark .home .text{
   }
   .areasDeEstudioSectionVulcanologia {
     background-image: url(../img/fondoMobileVulca.svg);
-    padding: 10%;
+    padding: 5%;
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed; 
   }
 
+  .mobile-content-vulcaIntermedio{
+    background-image: url(../img/fondoMobileVulca.svg);
+    padding: 5%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
   .areasDeEstudioSectionGeologia {
     background-image: url(../img/fondoMobileGeo.svg);
     padding: 10%;
@@ -753,26 +759,44 @@ mobile-content {
   grid-auto-rows: 22rem;
   grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
 }
+
 .introduccion {
   display: grid;
+  background-color: #f0eade;
+  border-radius: 1rem;
+  box-shadow: #23232e 0px 0px 10px;
+  padding: 10%;
+margin-top: 20%;
+
 }
 
 .introImage {
-  grid-column: 1 / span 2; /* Span two columns */
+  grid-area: image; /* Assign to the image area */
   height: auto;
   width: 70%;
-  justify-content: center;
+  justify-self: center;
+  position: absolute;
+  top: 8rem;
+  margin-top: 20%;
 }
 
 .introText {
-  grid-column: 2 / -1; /* Start from the second column and span to the end */
+  grid-area: text; /* Assign to the text area */
 }
 
+.sliderDeTemas{
+  background-color: #f0eade;
+  border-radius: 1rem;
+  box-shadow: #23232e 0px 0px 10px;
 
-/* Footer */
-footer {
 }
 
+.preguntasFrecuentes{
+  background-color: #f0eade;
+  border-radius: 1rem;
+  box-shadow: #23232e 0px 0px 10px;
+
+}
 
 
 }
