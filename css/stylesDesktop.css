@@ -5,6 +5,7 @@
   font-family: 'Kids Komik';
   src: url('../fonts/kidskomik/KidsKomik/KidsKomik.ttf') format('truetype');
 }
+
 * {
   box-sizing: border-box;
 }
@@ -19,16 +20,16 @@
 
   .hamburger {
     display: none;
-}
+  }
 
-html {
-  overflow-x: hidden;
-  font-family: "Roboto", sans-serif;
-}
+  html {
+    overflow-x: hidden;
+    font-family: "Roboto", sans-serif;
+  }
 
-* {
-  box-sizing: border-box;
-}
+  * {
+    box-sizing: border-box;
+  }
 
 
   * {
@@ -184,17 +185,17 @@ html {
 
   }
 
-  .container-grasszonesuperior{
+  .container-grasszonesuperior {
     display: flex;
-flex-direction: row;
+    flex-direction: row;
   }
 
-  .container-grasszonesuperior div{
+  .container-grasszonesuperior div {
 
     flex: 1;
     height: 15%;
     width: 50%;
-    
+
   }
 
 
@@ -206,7 +207,7 @@ flex-direction: row;
   .swiper-container {
     width: 100%;
     height: 35%;
-    
+
     transform: translateY(70%);
   }
 
@@ -218,7 +219,7 @@ flex-direction: row;
 
   .swiper-slide img {
     width: 50%;
-    
+
     height: auto;
   }
 
@@ -251,28 +252,28 @@ flex-direction: row;
     transform: translateY(150%);
   }
 
-  .swiper-pagination{
-position: absolute !important;
-bottom: -50% !important;
+  .swiper-pagination {
+    position: absolute !important;
+    bottom: -50% !important;
 
   }
 
-  .h1-slide1{
+  .h1-slide1 {
 
 
     margin-bottom: 20px;
   }
 
-  .ul-slide1{
+  .ul-slide1 {
     line-height: 2;
     margin-bottom: 20px;
   }
 
-  .a-slide1{
+  .a-slide1 {
 
     background-color: red;
     padding: 10px;
-    color:#000;
+    color: #000;
     justify-content: center;
 
   }
@@ -283,7 +284,7 @@ bottom: -50% !important;
     width: 100%;
     font-family: 'Afacad', sans-serif;
     border-radius: 20px;
-    
+
     font-size: 2vw;
     text-align: justify;
     padding: 20px;
@@ -546,157 +547,240 @@ bottom: -50% !important;
   }
 
 
-      /* VULCANOLOGIA INTERMEDIO*/
-      .vulcanologia-zone {
-        background-image: url(../img/fondovulcanologiadesktop.svg);
-        background-size: cover;
-        height: 250vh;
-        margin-top: -5%;
-      }
+  /* VULCANOLOGIA INTERMEDIO*/
+  .vulcanologia-zone {
+    background-image: url(../img/fondovulcanologiadesktop.svg);
+    background-size: cover;
+    height: 250vh;
+    margin-top: -5%;
+  }
+
+  .vulcanologia-zone-superior,
+  .vulcanologia-zone-inferior {
+
+    flex: 1;
+    height: 50%;
+    overflow: hidden;
+  }
+
+  .vulcasuperior-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+  }
+
+  .mitad-superior {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin: 0;
+  }
+
+  .vulcacard-superior {
+    background-color: #FAF3E0;
+    /* Color blanco hueso */
+    border-radius: 10px;
+    /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Sombra suave */
+    padding: 20px;
+    /* Espaciado interno */
+    width: 90%;
+    /* Ancho de la tarjeta (80% del contenedor padre) */
+
+    height: 60%;
+    /* Altura automática (se ajustará según el contenido) */
+    margin: auto;
+    /* Centrar la tarjeta */
+    box-sizing: border-box;
+    /* Incluir el padding y el border en el ancho total */
+  }
+
+  .vulcainferior-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .mitad-1 {
+    height: 75%;
+    overflow: hidden;
+  }
+
+  .mitad-2 {
+    height: 25%;
+    overflow: hidden;
+  }
+
+  .container-intermedio {
+    margin: 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .column {
+    flex: 1 1 calc(33.33% - 20px);
+    /* Divide el espacio en tres columnas */
+    max-width: calc(33.33% - 20px);
+    /* Establece el ancho máximo de cada columna */
+  }
+
+  .custom-card {
+    background: rgba(241, 25, 230, 0.508);
+    margin: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    padding: 1rem;
+  }
+
+  .vulca-buttons {
+    display: flex;
+    justify-content: center;
+    transform: translate(-15vh, 2vh);
+    width: 125%;
+  }
+
+  .swiper {
+    width: 400px;
+    height: 450px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
+
+  .swiper-cards .swiper-slide {
+    overflow: hidden;
+    border: 1px solid white;
+  }
+
+  .swiper-slide {
+    background: #fff;
+    border-radius: 18px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .swiper-slide.swiper-slide-active {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .ghost {
+    background: url(../img/ghost.jpg);
+    background-size: cover;
+    background-position: center;
+  }
+
+  .jack {
+    background: url(../img/jack.jpg);
+    background-size: cover;
+    background-position: center;
+  }
+
+  .god {
+    background: url(../img/god.jpg);
+    background-size: cover;
+    background-position: center;
+  }
+
+  .joker {
+    background: url(../img/joker.jpg);
+    background-size: cover;
+    background-position: center;
+  }
+
+  .wolverine {
+    background: url(../img/wolverine.jpg);
+    background-size: cover;
+    background-position: center;
+  }
+
+  /*VULCANOLOGIA TEMAS*/
+
+  .vulcatemas-zone {
+    background-image: url(../img/fondovulcanologiadesktop.svg);
+    background-size: cover;
+    height: 250vh;
+    margin-top: -5%;
+    display: flex;
+    /* Utilizamos flexbox para centrar horizontal y verticalmente */
+    justify-content: center;
+    /* Centramos horizontalmente */
+    align-items: center;
+  }
+
+  .temas-container {
+
+    background-color: rgba(255, 255, 255, 0.5);
+    /* Utilizamos RGBA para definir un color blanco con transparencia */
+    width: 95%;
+    /* El ancho ocupa todo el espacio disponible dentro de la sección */
+    height: 93%;
+    /* La altura también ocupa todo el espacio disponible dentro de la sección */
+    box-sizing: border-box;
+    border-radius: 20px;
+  }
+
+  .superior-vulca {
+
+    height: 75%;
+    overflow: hidden;
+    display: flex;
+    padding: 20px;
+
+  }
+
+  .superior-vulca-1 {
+    width: 70%;
+    background-color: white; /* Color de fondo blanco */
+    border-radius: 15px;
+  }
+
+  .superior-vulca-2 {
+    width: 30%;
+    margin-left: 10px;
+  }
+
+  .superior-vulca-2-1 {
+    height: 40%;
+    background-color: aquamarine;
+    border-radius: 15px;
+
+
+  }
+
+  .superior-vulca-2-2 {
+    height: 20%;
+    border-radius: 15px;
+    background-color: orangered;
     
-      .vulcanologia-zone-superior,
-      .vulcanologia-zone-inferior {
-    
-        flex: 1;
-        height: 50%;
-        overflow: hidden;
-      }
-    
-      .vulcasuperior-container {
-        width: 100%;
-        height: 100%;
-        display: flex;
-      }
-    
-      .mitad-superior {
-        flex: 1;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100%;
-        margin: 0;
-      }
-    
-      .vulcacard-superior {
-        background-color: #FAF3E0;
-        /* Color blanco hueso */
-        border-radius: 10px;
-        /* Bordes redondeados */
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        /* Sombra suave */
-        padding: 20px;
-        /* Espaciado interno */
-        width: 90%;
-        /* Ancho de la tarjeta (80% del contenedor padre) */
-    
-        height: 60%;
-        /* Altura automática (se ajustará según el contenido) */
-        margin: auto;
-        /* Centrar la tarjeta */
-        box-sizing: border-box;
-        /* Incluir el padding y el border en el ancho total */
-      }
-    
-      .vulcainferior-container{
-        width: 100%;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-      }
-    
-      .mitad-1{
-      height: 75%;
-      overflow: hidden;
-      }
-    
-      .mitad-2{
-        height: 25%;
-        overflow: hidden;
-      }
-    
-      .container-intermedio {
-        margin: 20px;
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
-      }
-      
-      .column {
-        flex: 1 1 calc(33.33% - 20px); /* Divide el espacio en tres columnas */
-        max-width: calc(33.33% - 20px); /* Establece el ancho máximo de cada columna */
-      }
-      
-      .custom-card {
-        background: rgba(241, 25, 230, 0.508);
-        margin: 10px;
-        border-radius: 5px;
-        box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-        color: white;
-        font-weight: bold;
-        text-align: center;
-        padding: 1rem;
-      }
-    
-      .vulca-buttons{
-        display: flex;
-        justify-content: center;
-        transform: translate(-15vh, 2vh);
-        width: 125%;
-      }
-    
-      .swiper {
-        width: 400px;
-        height: 450px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        
-      }
-      
-      .swiper-cards .swiper-slide{
-        overflow:hidden;
-        border: 1px solid white;
-      }
-      
-      .swiper-slide {
-        background: #fff;
-        border-radius: 18px;
-        position: relative;
-        z-index: 1;
-      }
-      
-      .swiper-slide.swiper-slide-active {
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      }
-      
-      .ghost {
-        background:url(../img/ghost.jpg);
-        background-size: cover;
-        background-position: center;
-      }
-      
-      .jack {
-        background:url(../img/jack.jpg);
-        background-size: cover;
-        background-position: center;
-      }
-      
-      .god {
-        background:url(../img/god.jpg);
-        background-size: cover;
-        background-position: center;
-      }
-      
-      .joker {
-        background:url(../img/joker.jpg);
-        background-size: cover;
-        background-position: center;
-      }
-      
-      .wolverine {
-        background:url(../img/wolverine.jpg);
-        background-size: cover;
-        background-position: center;
-      }
-    
+  }
+
+  .inferior-vulca {
+
+    height: 25%;
+    overflow: hidden;
+    padding: 20px;
+  }
+  
+  .inferior-vulca-1 {
+    height: 50%;
+    border-radius: 15px;
+    background-color: orangered;
+  }
+
+  .inferior-vulca-2 {
+    height: 50%;
+  }
+
+
+
+
 }
