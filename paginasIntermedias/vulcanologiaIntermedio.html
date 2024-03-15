@@ -7,9 +7,12 @@
   <link rel="stylesheet" href="../css/stylesDesktop.css" />
   <link rel="stylesheet" href="../css/stylesMobile.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Afacad">
-  <script defer src="/js/vulcaintermedio.js"></script>
+  <script defer src="../js/vulcaintermedio.js"></script>
+  <script defer src="../js/index.js"></script>
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+
   <title>El observatorio Educa</title>
 </head>
 
@@ -19,7 +22,102 @@
 
     <body class="body-mobile">
       <!-- ============NUEVO SIDEBAR============= -->
-
+      <nav class="sidebar close">
+        <header>
+          <div class="image-text">
+            <span class="image">
+              <img src="./img/log" alt="">
+            </span>
+    
+            <div class="text logo-text">
+              <span class="name">El Observatorio Educa</span>
+              <span class="profession">Ministerio de Medio Ambiente y</span>
+              <span class="profession"> Recursos Naturales</span>
+            </div>
+          </div>
+        </header>
+    
+        <div class="menu-bar">
+          <div class="menu">
+    
+            <li class="search-box">
+              <i class='bx bx-search icon'></i>
+              <input type="text" placeholder="Search...">
+            </li>
+    
+            <ul class="menu-links">
+              <li class="nav-link">
+                <a href="../index.html">
+                  <i class='bx bx-home-alt icon'></i>
+                  <span class="text nav-text">Pagina Principal</span>
+                </a>
+              </li>
+    
+              <li class="nav-link">
+                <a href="../vulcanologia.html">
+                  <i class='bx bx-bar-chart-alt-2 icon'></i>
+                  <span class="text nav-text">vulcanología</span>
+                </a>
+              </li>
+    
+              <li class="nav-link">
+                <a href="../meteorologia.html">
+                  <i class='bx bxs-cloud-rain icon'></i>
+                  <span class="text nav-text">Meteorología</span>
+                </a>
+              </li>
+    
+              <li class="nav-link">
+                <a href="../geologia.html">
+                  <i class='bx bx-pie-chart-alt icon'></i>
+                  <span class="text nav-text">Geología</span>
+                </a>
+              </li>
+    
+              <li class="nav-link">
+                <a href="../oceanografia.html">
+                  <i class='bx bx-water icon'></i>
+                  <span class="text nav-text">Oceanografía</span>
+                </a>
+              </li>
+    
+              <li class="nav-link">
+                <a href="../sismologia.html">
+                  <i class='bx bxs-error icon'></i>
+                  <span class="text nav-text">Sismología</span>
+                </a>
+              </li>
+           
+              <li class="nav-link">
+                <a href="#">
+                  <i class='bx bx-folder-open icon'></i>
+                  <span class="text nav-text">Preguntas Frecuentes</span>
+                </a>
+              </li>
+              <li class="nav-link">
+                <a href="#">
+                  <i class='bx bx-battery icon'></i>
+                  <span class="text nav-text">Videos Educativos</span>
+                </a>
+              </li>
+              <li class="">
+                <a href="#">
+                  <i class='bx bxs-file-pdf icon'></i>
+                  <span class="text nav-text">Recursos y actividades</span>
+                </a>
+              </li>
+    
+            </ul>
+          </div>
+    
+      </nav>
+    
+      <button class="hamburger" onclick="toggleSidebar()">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+    
+      </button>
       <!-- ================== -->
       <main class="mobile-content-vulcaIntermedio">
         <section class="areasDeEstudioSectionVulcanologia">
@@ -46,7 +144,6 @@
             <p class="preguntasFaqTexto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos natus
               doloribus quidem similique </p>
 
-            <p class="preguntasFaqTexto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, aperiam.</p>
           </section>
           <section class="actividadesExtra">
             <a href="semaforo.html" class="boton">
@@ -94,7 +191,7 @@
                 <div class="swiper-wrapper">
 
                   <!-- Swiper Slides Code -->
-                  <div class="swiper-slide ghost"   onclick="window.location.href='../vulcanologia.html';"></div>
+                  <div class="swiper-slide ghost"></div>
                   <div class="swiper-slide jack"></div>
                   <div class="swiper-slide god"></div>
                   <div class="swiper-slide joker"></div>

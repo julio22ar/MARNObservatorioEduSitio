@@ -23,7 +23,7 @@
     --text-primary: #b6b6b6;
     --text-secondary: #ececec;
     --bg-primary: #23232e;
-    --bg-secondary:141418;
+    --bg-secondary: #141418;
     --sidebar-color: #ffffff;
     --primary-color: #695CFE;
     --primary-color-light: #F6F5FF;
@@ -89,6 +89,54 @@ body {
   border-radius: 6px;
 }
 
+.container-grasszonesuperiorMobile {
+  padding: 20px;
+  text-align: center;
+  overflow-x: hidden;
+  background-image: url(/img/fondolago.svg);
+}
+
+.observatorioMobile {
+  width: 80%; /* Adjust as needed */
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.parrafobservatorioMobile {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333; /* Adjust as needed */
+  background-color: #f0eade;
+  border-radius: 10px;
+  box-shadow: #23232e 0px 0px 10px;
+  padding: 10px;
+}
+
+/* Styles for lakezone-mobile */
+.lakezone-mobile {
+  padding: 20px;
+  text-align: center;
+  background-image: url(../img/fondolago.svg);
+}
+.lakezone-headerMobile img{
+  width: 70%; /* Adjust as needed */
+  height: auto;
+  margin-bottom: 20px;
+
+}
+
+.parrafolakezoneMobile {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333; /* Adjust as needed */
+  background-color: #ececec;
+  box-shadow: #23232e 0px 0px 10px;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+
+
 .sidebar .icon{
   min-width: 60px;
   border-radius: 6px;
@@ -146,23 +194,7 @@ header .image-text .profession{
   justify-content: center;
 }
 
-.sidebar header .toggle{
-  position: absolute;
-  top: 50%;
-  right: -25px;
-  transform: translateY(-50%) rotate(180deg);
-  height: 25px;
-  width: 25px;
-  background-color: var(--primary-color);
-  color: var(--sidebar-color);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 22px;
-  cursor: pointer;
-  transition: var(--tran-05);
-}
+
 body.dark .sidebar header .toggle{
   color: var(--text-color);
 }
@@ -470,7 +502,9 @@ body.dark .home .text{
     width: 100%;
     height: auto;
   }
-  
+
+
+
   .areasDeEstudioSection {
     background-image: url(../img/fondoMobileMARN.svg);
     padding: 10%;
@@ -486,7 +520,6 @@ body.dark .home .text{
 
   .mobile-content-vulcaIntermedio{
     background-image: url(../img/fondoMobileVulca.svg);
-    padding: 5%;
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -651,12 +684,10 @@ body.dark .home .text{
     background-color: rgb(50, 62, 72);
     display: flex;
     align-items: center;
-    padding: 10px;
     flex-wrap: wrap;
   }
   
   .footerSection img {
-    margin-right: 10px;
     max-width: 100%;
     height: auto;
   }
@@ -665,7 +696,6 @@ body.dark .home .text{
     display: block; /* Coloca los elementos uno al lado del otro */
     justify-content: space-around; /* Distribuye los elementos uniformemente en el contenedor */
     background-image: url(../img/fondoMobileVulca.svg); /* Aplica el fondo */
-    padding: 2em; /* Agrega algo de espacio alrededor de los elementos */
     background-size: cover; /* Asegura que el fondo cubra toda la sección */
     background-repeat: no-repeat; /* Evita que el fondo se repita */
     background-attachment: fixed; 
@@ -679,7 +709,7 @@ body.dark .home .text{
 }
 
 .actividadesExtra > .boton > img {
-    width: 50%; /* Hace que las imágenes ocupen todo el ancho disponible */
+    width: 65%; /* Hace que las imágenes ocupen todo el ancho disponible */
     height: auto; /* Mantiene la proporción de las imágenes */
 }
 /* HIDROLOGIA  */
@@ -755,7 +785,8 @@ mobile-content {
 
 .gridLayout{
   display: grid;
-  gap: 5rem;
+  gap: 8rem;
+  padding: 2rem;
   grid-auto-rows: 22rem;
   grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
 }
